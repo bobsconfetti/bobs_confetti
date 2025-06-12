@@ -301,52 +301,81 @@
 </section>
 
 
-
-<!-- Audio Regeneration Comparison -->
+<!-- Audio Regeneration Comparison for Mandarin Songs -->
 <section class="section hero is-light">
+  <style>
+    .song-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .song-grid .box {
+      width: 45%;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .song-content {
+      flex: 1;
+    }
+    .song-content audio {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    @media screen and (max-width: 768px) {
+      .song-grid .box {
+        width: 100%;
+      }
+    }
+  </style>
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Audio Regeneration: Mandarin Songs</h2>
-    <!-- 天后 - Andrew Tan -->
-    <div class="box">
-      <h3 class="title is-4">《天后》 - Andrew Tan</h3>
-      <p><em>Prompted Genre:</em> N/A</p>
-      <div class="columns is-vcentered">
-        <div class="column has-text-centered">
+    <div class="song-grid">
+
+      <!-- 天后 -->
+      <div class="box">
+        <h3 class="title is-4">
+          《天后》<br>
+          <span class="is-size-6 has-text-weight-normal">Artist: Andrew Tan</span>
+        </h3>
+        <p><em>Prompted Genre:</em> N/A</p>
+        <div class="content song-content has-text-centered">
           <p><strong>Original</strong></p>
           <audio controls>
             <source src="static/audio/Mandarin/original/Andrew Tan (陈势安) - Tian Hou (天后)-extracted.mp3" type="audio/mpeg">
           </audio>
-        </div>
-        <div class="column has-text-centered">
           <p><strong>Generated</strong></p>
           <audio controls>
             <source src="static/audio/Mandarin/generated/天后 (N:A).mp3" type="audio/mpeg">
           </audio>
         </div>
       </div>
-    </div>
 
-    <!-- 甜蜜蜜 - Teresa Teng -->
-    <div class="box">
-      <h3 class="title is-4">《甜蜜蜜》 - Teresa Teng</h3>
-      <p><em>Prompted Genre:</em> N/A</p>
-      <div class="columns is-vcentered">
-        <div class="column has-text-centered">
+      <!-- 甜蜜蜜 -->
+      <div class="box">
+        <h3 class="title is-4">
+          《甜蜜蜜》<br>
+          <span class="is-size-6 has-text-weight-normal">Artist: Teresa Teng</span>
+        </h3>
+        <p><em>Prompted Genre:</em> N/A</p>
+        <div class="content song-content has-text-centered">
           <p><strong>Original</strong></p>
           <audio controls>
             <source src="static/audio/Mandarin/original/甜蜜蜜-extracted.mp3" type="audio/mpeg">
           </audio>
-        </div>
-        <div class="column has-text-centered">
           <p><strong>Generated</strong></p>
           <audio controls>
             <source src="static/audio/Mandarin/generated/甜蜜蜜 (Teresa Teng) (N:A).mp3" type="audio/mpeg">
           </audio>
         </div>
       </div>
+
     </div>
   </div>
 </section>
+
 
 <!-- Audio Regeneration Comparison for 后来 -->
 <section class="section hero is-light">
