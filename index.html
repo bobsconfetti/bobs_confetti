@@ -155,20 +155,24 @@
 <!-- End paper abstract -->
 
 <!-- Audio Regeneration Comparison for English Songs -->
+<!-- Audio Regeneration Comparison for English Songs -->
 <section class="section hero is-light">
   <style>
-    /* Ensure all boxes match height and stack content vertically */
+    /* Center labels and audio controls side-by-side */
+    .columns.audio-pair {
+      margin-top: 1rem;
+    }
+    .columns.audio-pair .column audio {
+      width: 100%;
+    }
+    /* Equal-height boxes */
     .columns .column .box {
       display: flex;
       flex-direction: column;
       height: 100%;
     }
-    .columns .column .box .content {
+    .columns .column .box .song-content {
       flex: 1;
-    }
-    .columns .column .box audio {
-      width: 100%;
-      margin-bottom: 1rem;
     }
   </style>
   <div class="container is-max-desktop">
@@ -179,112 +183,131 @@
         <div class="box">
           <h3 class="title is-4">Let It Be - The Beatles</h3>
           <p><em>Prompted Genre:</em> Inspiring female uplifting pop airy vocal electronic bright vocal</p>
-          <div class="content">
-            <p><strong>Original</strong></p>
-            <audio controls>
-              <source src="static/audio/English/original/Let it Be.mp3" type="audio/mpeg">
-            </audio>
-            <p><strong>Generated</strong></p>
-            <audio controls>
-              <source src="static/audio/English/generated/Let it Be (inspiring female uplifting pop airy vocal electronic bright vocal vocal).mp3" type="audio/mpeg">
-            </audio>
+          <div class="columns is-vcentered audio-pair song-content">
+            <div class="column has-text-centered">
+              <p><strong>Original</strong></p>
+              <audio controls>
+                <source src="static/audio/English/original/Let it Be.mp3" type="audio/mpeg">
+              </audio>
+            </div>
+            <div class="column has-text-centered">
+              <p><strong>Generated</strong></p>
+              <audio controls>
+                <source src="static/audio/English/generated/Let it Be (inspiring female uplifting pop airy vocal electronic bright vocal vocal).mp3" type="audio/mpeg">
+              </audio>
+            </div>
           </div>
         </div>
       </div>
-
       <!-- Lose Yourself -->
       <div class="column is-one-third">
         <div class="box">
           <h3 class="title is-4">Lose Yourself - Eminem</h3>
           <p><em>Prompted Genre:</em> Inspiring female uplifting pop airy vocal electronic bright vocal</p>
-          <div class="content">
-            <p><strong>Original</strong></p>
-            <audio controls>
-              <source src="static/audio/English/original/Lose Yourself.mp3" type="audio/mpeg">
-            </audio>
-            <p><strong>Generated</strong></p>
-            <audio controls>
-              <source src="static/audio/English/generated/Lose Yourself (inspiring female uplifting pop airy vocal electronic bright vocal vocal).mp3" type="audio/mpeg">
-            </audio>
+          <div class="columns is-vcentered audio-pair song-content">
+            <div class="column has-text-centered">
+              <p><strong>Original</strong></p>
+              <audio controls>
+                <source src="static/audio/English/original/Lose Yourself.mp3" type="audio/mpeg">
+              </audio>
+            </div>
+            <div class="column has-text-centered">
+              <p><strong>Generated</strong></p>
+              <audio controls>
+                <source src="static/audio/English/generated/Lose Yourself (inspiring female uplifting pop airy vocal electronic bright vocal vocal).mp3" type="audio/mpeg">
+              </audio>
+            </div>
           </div>
         </div>
       </div>
-
       <!-- Empire State of Mind -->
       <div class="column is-one-third">
         <div class="box">
           <h3 class="title is-4">Empire State of Mind - Jay-Z ft. Alicia Keys</h3>
           <p><em>Prompted Genre:</em> Inspiring female uplifting pop airy vocal electronic bright vocal</p>
-          <div class="content">
-            <p><strong>Original</strong></p>
-            <audio controls>
-              <source src="static/audio/English/original/Empire State of Mind.mp3" type="audio/mpeg">
-            </audio>
-            <p><strong>Generated</strong></p>
-            <audio controls>
-              <source src="static/audio/English/generated/Empire State of Mind (inspiring female uplifting pop airy vocal electronic bright vocal vocal).mp3" type="audio/mpeg">
-            </audio>
+          <div class="columns is-vcentered audio-pair song-content">
+            <div class="column has-text-centered">
+              <p><strong>Original</strong></p>
+              <audio controls>
+                <source src="static/audio/English/original/Empire State of Mind.mp3" type="audio/mpeg">
+              </audio>
+            </div>
+            <div class="column has-text-centered">
+              <p><strong>Generated</strong></p>
+              <audio controls>
+                <source src="static/audio/English/generated/Empire State of Mind (inspiring female uplifting pop airy vocal electronic bright vocal vocal).mp3" type="audio/mpeg">
+              </audio>
+            </div>
           </div>
         </div>
       </div>
-
       <!-- Billie Jean -->
       <div class="column is-one-third">
         <div class="box">
           <h3 class="title is-4">Billie Jean - Michael Jackson</h3>
           <p><em>Prompted Genre:</em> Inspiring female uplifting pop airy vocal electronic bright vocal</p>
-          <div class="content">
-            <p><strong>Original</strong></p>
-            <audio controls>
-              <source src="static/audio/English/original/Billie Jean.mp3" type="audio/mpeg">
-            </audio>
-            <p><strong>Generated</strong></p>
-            <audio controls>
-              <source src="static/audio/English/generated/Billie Jean (inspiring female uplifting pop airy vocal electronic bright vocal vocal).mp3" type="audio/mpeg">
-            </audio>
+          <div class="columns is-vcentered audio-pair song-content">
+            <div class="column has-text-centered">
+              <p><strong>Original</strong></p>
+              <audio controls>
+                <source src="static/audio/English/original/Billie Jean.mp3" type="audio/mpeg">
+              </audio>
+            </div>
+            <div class="column has-text-centered">
+              <p><strong>Generated</strong></p>
+              <audio controls>
+                <source src="static/audio/English/generated/Billie Jean (inspiring female uplifting pop airy vocal electronic bright vocal vocal).mp3" type="audio/mpeg">
+              </audio>
+            </div>
           </div>
         </div>
       </div>
-
       <!-- Thinking Out Loud -->
       <div class="column is-one-third">
         <div class="box">
           <h3 class="title is-4">Thinking Out Loud - Ed Sheeran</h3>
           <p><em>Prompted Genre:</em> Male romantic vocal guitar ballad with piano melody</p>
-          <div class="content">
-            <p><strong>Original</strong></p>
-            <audio controls>
-              <source src="static/audio/English/original/Thinking Out Loud - Extracted.mp3" type="audio/mpeg">
-            </audio>
-            <p><strong>Generated</strong></p>
-            <audio controls>
-              <source src="static/audio/English/generated/Thinking Out Loud (Male-romantic-vocal-guitar-ballad-with-piano-melody).mp3" type="audio/mpeg">
-            </audio>
+          <div class="columns is-vcentered audio-pair song-content">
+            <div class="column has-text-centered">
+              <p><strong>Original</strong></p>
+              <audio controls>
+                <source src="static/audio/English/original/Thinking Out Loud - Extracted.mp3" type="audio/mpeg">
+              </audio>
+            </div>
+            <div class="column has-text-centered">
+              <p><strong>Generated</strong></p>
+              <audio controls>
+                <source src="static/audio/English/generated/Thinking Out Loud (Male-romantic-vocal-guitar-ballad-with-piano-melody).mp3" type="audio/mpeg">
+              </audio>
+            </div>
           </div>
         </div>
       </div>
-
       <!-- Basket Case -->
       <div class="column is-one-third">
         <div class="box">
           <h3 class="title is-4">Basket Case - Green Day</h3>
           <p><em>Prompted Genre:</em> N/A</p>
-          <div class="content">
-            <p><strong>Original</strong></p>
-            <audio controls>
-              <source src="static/audio/English/original/Basket Case.mp3" type="audio/mpeg">
-            </audio>
-            <p><strong>Generated</strong></p>
-            <audio controls>
-              <source src="static/audio/English/generated/Basket Case ().mp3" type="audio/mpeg">
-            </audio>
+          <div class="columns is-vcentered audio-pair song-content">
+            <div class="column has-text-centered">
+              <p><strong>Original</strong></p>
+              <audio controls>
+                <source src="static/audio/English/original/Basket Case.mp3" type="audio/mpeg">
+              </audio>
+            </div>
+            <div class="column has-text-centered">
+              <p><strong>Generated</strong></p>
+              <audio controls>
+                <source src="static/audio/English/generated/Basket Case ().mp3" type="audio/mpeg">
+              </audio>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
+
 
 
 <!-- Audio Regeneration Comparison -->
