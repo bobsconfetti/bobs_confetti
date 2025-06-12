@@ -549,9 +549,10 @@
   </div>
 </section>
 
-<!-- Audio Regeneration: Phoneme Variants (Modified Lyrics Only) -->
+<!-- Phoneme Variants: Original & Modified Audio with Highlights -->
 <section class="section hero is-light">
   <style>
+    .changed { color: #e74c3c; font-weight: bold; }
     .song-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
     .song-grid .box { width: 45%; min-width: 300px; display: flex; flex-direction: column; height: 100%; }
     .song-content { flex: 1; }
@@ -562,18 +563,26 @@
   </style>
 
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Phoneme Variants (Modified Lyrics Only)</h2>
+    <h2 class="title is-3 has-text-centered">Phoneme Variants (Original & Modified Audio)</h2>
+    <p class="has-text-centered">Subtle lyric swaps preserve phonetic patterns. Changed words are highlighted in red.</p>
+
     <div class="song-grid">
 
       <!-- 月亮代表我的心 -->
       <div class="box">
         <h3 class="title is-4">
           《月亮代表我的心》<br>
-          <span class="is-size-6 has-text-weight-normal">Artist: Teresa Teng</span>
+          <span class="is-size-6 has-text-weight-normal">Artist: Teresa Teng</span><br>
+          <p class="is-size-7"><em>Genre:</em> Mandarin Pop Ballad</p>
         </h3>
         <div class="content song-content has-text-centered">
+          <p><strong>Original Audio</strong></p>
           <audio controls>
-            <source src="static/audio/Chinese/generated/月亮代表我的心_Teresa Teng_tp0@93_..._mixed.mp3" type="audio/mpeg">
+            <source src="static/audio/Phoneme/original/月亮代表我的心.mp3" type="audio/mpeg">
+          </audio>
+          <p><strong>Modified Audio</strong></p>
+          <audio controls>
+            <source src="static/audio/Phoneme/generated/月亮代表我的心_Teresa Teng__tp0@93_T1@0_rp1@1_maxtk8000_eced0844-ca95-4b84-be6a-b5985a99279f_mixed.mp3" type="audio/mpeg">
           </audio>
         </div>
         <div class="lyrics">
@@ -593,11 +602,11 @@
 我爱你有几分
 
 [chorus]
-我的情不移
-我的爱不变
+<span class="changed">我的情不移</span>
+<span class="changed">我的爱不变</span>
 月亮代表我的心
           </pre>
-          <p><strong>Difference:</strong> The second chorus lines were altered to “我的情不移” and “我的爱不变” to preserve near-identical phoneme patterns of the original “也真.”</p>
+          <p><strong>Modification:</strong> In the second chorus, “我的情也真” → <span class="changed">“我的情不移”</span> and “我的爱也真” → <span class="changed">“我的爱不变”</span>, preserving the original tonal contour.</p>
         </div>
       </div>
 
@@ -605,45 +614,49 @@
       <div class="box">
         <h3 class="title is-4">
           《Let It Be》<br>
-          <span class="is-size-6 has-text-weight-normal">Artist: The Beatles</span>
+          <span class="is-size-6 has-text-weight-normal">Artist: The Beatles</span><br>
+          <p class="is-size-7"><em>Genre:</em> Soft Rock Ballad</p>
         </h3>
         <div class="content song-content has-text-centered">
+          <p><strong>Original Audio</strong></p>
           <audio controls>
-            <source src="static/audio/English/generated/Let It Be_The Beatles_..._mixed.mp3" type="audio/mpeg">
+            <source src="static/audio/Phoneme/original/Let it Be.mp3" type="audio/mpeg">
+          </audio>
+          <p><strong>Modified Audio</strong></p>
+          <audio controls>
+            <source src="static/audio/Phoneme/generated/Let It Be_The Beatles_pop-comforting-male-gentle-vocal-piano-ballad-soothing-warm-melodic-vocal_tp0@93_T1@0_rp1@1_maxtk8000_99245684-2085-4d52-befa-81b5fa9f7569_mixed.mp3" type="audio/mpeg">
           </audio>
         </div>
         <div class="lyrics">
           <h4>Modified Lyrics</h4>
           <pre>
 [verse]
-When I bind myself in lines of rubble
-Other fairy comes to me
-Sneaking terms of vision: get it free
+When I <span class="changed">bind</span> myself in <span class="changed">lines of rubble</span>
+<span class="changed">Other fairy</span> comes to me
+<span class="changed">Sneaking terms of vision: get it free</span>
 And in my power of starkness
 She is handing right above me
-Squeaking terms of vision: get it free
+<span class="changed">Squeaking terms of vision: get it free</span>
 
 [chorus]
-Get it free, get it free, bet it's me, let it see
-Mister's words are given, get it free
+<span class="changed">Get it free, get it free, bet it's me, let it see</span>
+Mister's words are given,<span class="changed"> get it free</span>
 
 [verse]
 And when the spoken-hearted people
 Giving in the whirl agree
-There will be an anthem: get it free
+<span class="changed">There will be an anthem: get it free</span>
 For though they may be started
 There is still a dance that they will be
 There will be an anthem: get it free
           </pre>
-          <p><strong>Difference:</strong> Major phoneme substitutions include “find”→“bind,” “times of trouble”→“lines of rubble,” “Mother Mary”→“Other fairy,” and “let it be”→“get it free,” maintaining the original stress and rhyme patterns.</p>
+          <p><strong>Modification:</strong> Phoneme swaps to mirror originals: “find”→<span class="changed">“bind”</span>, “times of trouble”→<span class="changed">“lines of rubble”</span>, “Mother Mary”→<span class="changed">“Other fairy”</span>, “Speaking words of wisdom”→<span class="changed">“Sneaking terms of vision: get it free”</span>, and the refrain “let it be”→<span class="changed">“get it free”</span> (including “let it see”).</p>
         </div>
       </div>
 
     </div>
   </div>
 </section>
-
-
 
 
 <!-- Image carousel -->
