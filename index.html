@@ -325,15 +325,23 @@
 <!-- Audio Regeneration Comparison for Mandarin Songs -->
 <section class="section hero is-light">
   <style>
+    .mandarin-scroll-wrapper {
+      overflow-x: auto;
+      padding-bottom: 1rem;
+    }
     .song-grid {
       display: flex;
       flex-wrap: nowrap;
       gap: 20px;
-      justify-content: center;
+      justify-content: flex-start;
     }
     .song-grid .box {
-      width: 23%; /* roughly 4 columns = 4 x 23% + gap */
-      min-width: 220px; /* optional */
+      width: 23%;
+      min-width: 300px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
     .song-content {
       flex: 1;
@@ -342,95 +350,90 @@
       width: 100%;
       margin-bottom: 1rem;
     }
-    @media screen and (max-width: 768px) {
-      .song-grid .box {
-        width: 100%;
-      }
-    }
   </style>
 
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Mandarin Songs</h2>
-    <div class="song-grid">
+    <div class="mandarin-scroll-wrapper">
+      <div class="song-grid">
 
-      <!-- 天后 -->
-      <div class="box">
-        <h3 class="title is-4">
-          《天后》<br>
-          <span class="is-size-6 has-text-weight-normal">Artist: Andrew Tan</span>
-        </h3>
-        <p class="is-size-7"><em>Prompted Genre:</em> N/A</p>
-        <div class="content song-content has-text-centered">
-          <p><strong>Original</strong></p>
-          <audio controls>
-            <source src="static/audio/Mandarin/original/Andrew Tan (陈势安) - Tian Hou (天后)-extracted.mp3" type="audio/mpeg">
-          </audio>
-          <p><strong>Generated</strong></p>
-          <audio controls>
-            <source src="static/audio/Mandarin/generated/天后 (N:A).mp3" type="audio/mpeg">
-          </audio>
+        <!-- 天后 -->
+        <div class="box">
+          <h3 class="title is-4">《天后》<br>
+            <span class="is-size-6 has-text-weight-normal">Artist: Andrew Tan</span>
+          </h3>
+          <p class="is-size-7"><em>Prompted Genre:</em> N/A</p>
+          <div class="content song-content has-text-centered">
+            <p><strong>Original</strong></p>
+            <audio controls>
+              <source src="static/audio/Mandarin/original/Andrew Tan (陈势安) - Tian Hou (天后)-extracted.mp3" type="audio/mpeg">
+            </audio>
+            <p><strong>Generated</strong></p>
+            <audio controls>
+              <source src="static/audio/Mandarin/generated/天后 (N:A).mp3" type="audio/mpeg">
+            </audio>
+          </div>
         </div>
-      </div>
 
-      <!-- 甜蜜蜜 -->
-      <div class="box">
-        <h3 class="title is-4">
-          《甜蜜蜜》<br>
-          <span class="is-size-6 has-text-weight-normal">Artist: Teresa Teng</span>
-        </h3>
-        <p class="is-size-7"><em>Prompted Genre:</em> N/A</p>
-        <div class="content song-content has-text-centered">
-          <p><strong>Original</strong></p>
-          <audio controls>
-            <source src="static/audio/Mandarin/original/甜蜜蜜-extracted.mp3" type="audio/mpeg">
-          </audio>
-          <p><strong>Generated</strong></p>
-          <audio controls>
-            <source src="static/audio/Mandarin/generated/甜蜜蜜 (Teresa Teng) (N:A).mp3" type="audio/mpeg">
-          </audio>
+        <!-- 甜蜜蜜 -->
+        <div class="box">
+          <h3 class="title is-4">《甜蜜蜜》<br>
+            <span class="is-size-6 has-text-weight-normal">Artist: Teresa Teng</span>
+          </h3>
+          <p class="is-size-7"><em>Prompted Genre:</em> N/A</p>
+          <div class="content song-content has-text-centered">
+            <p><strong>Original</strong></p>
+            <audio controls>
+              <source src="static/audio/Mandarin/original/甜蜜蜜-extracted.mp3" type="audio/mpeg">
+            </audio>
+            <p><strong>Generated</strong></p>
+            <audio controls>
+              <source src="static/audio/Mandarin/generated/甜蜜蜜 (Teresa Teng) (N:A).mp3" type="audio/mpeg">
+            </audio>
+          </div>
         </div>
-      </div>
 
-      <div class="box">
-        <h3 class="title is-4">
-          《朋友》<br>
-          <span class="is-size-6 has-text-weight-normal">Artist: Emil Chau</span>
-        </h3>
-        <p class="is-size-7"><em>Prompted Genre:</em> A-heartfelt-Chinese-ballad-celebrating-enduring-friendship-and-the-bonds-that-last-a-lifetime</p>
-        <div class="content song-content has-text-centered">
-          <p><strong>Original</strong></p>
-          <audio controls>
-            <source src="static/audio/Mandarin/original/朋友 (Emil Chau).mp3" type="audio/mpeg">
-          </audio>
-          <p><strong>Generated</strong></p>
-          <audio controls>
-            <source src="static/audio/Mandarin/generated/朋友 (A-heartfelt-Chinese-ballad-celebrating-enduring-friendship-and-the-bonds-that-last-a-lifetime).mp3" type="audio/mpeg">
-          </audio>
+        <!-- 朋友 v1 -->
+        <div class="box">
+          <h3 class="title is-4">《朋友》<br>
+            <span class="is-size-6 has-text-weight-normal">Artist: Emil Chau</span>
+          </h3>
+          <p class="is-size-7"><em>Prompted Genre:</em> A-heartfelt-Chinese-ballad-celebrating-enduring-friendship-and-the-bonds-that-last-a-lifetime</p>
+          <div class="content song-content has-text-centered">
+            <p><strong>Original</strong></p>
+            <audio controls>
+              <source src="static/audio/Mandarin/original/朋友 (Emil Chau).mp3" type="audio/mpeg">
+            </audio>
+            <p><strong>Generated</strong></p>
+            <audio controls>
+              <source src="static/audio/Mandarin/generated/朋友 (A-heartfelt-Chinese-ballad-celebrating-enduring-friendship-and-the-bonds-that-last-a-lifetime).mp3" type="audio/mpeg">
+            </audio>
+          </div>
         </div>
-      </div>
 
-      <div class="box">
-        <h3 class="title is-4">
-          《朋友》<br>
-          <span class="is-size-6 has-text-weight-normal">Artist: Emil Chau</span>
-        </h3>
-        <p class="is-size-7"><em>Prompted Genre:</em> folk-rock-acoustic-warm-male-resonant-vocal-friendship-anthem</p>
-        <div class="content song-content has-text-centered">
-          <p><strong>Original</strong></p>
-          <audio controls>
-            <source src="static/audio/Mandarin/original/朋友 (Emil Chau).mp3" type="audio/mpeg">
-          </audio>
-          <p><strong>Generated</strong></p>
-          <audio controls>
-            <source src="static/audio/Mandarin/generated/朋友 (folk-rock-acoustic-warm-male-resonant-vocal-friendship-anthem).mp3" type="audio/mpeg">
-          </audio>
+        <!-- 朋友 v2 -->
+        <div class="box">
+          <h3 class="title is-4">《朋友》<br>
+            <span class="is-size-6 has-text-weight-normal">Artist: Emil Chau</span>
+          </h3>
+          <p class="is-size-7"><em>Prompted Genre:</em> folk-rock-acoustic-warm-male-resonant-vocal-friendship-anthem</p>
+          <div class="content song-content has-text-centered">
+            <p><strong>Original</strong></p>
+            <audio controls>
+              <source src="static/audio/Mandarin/original/朋友 (Emil Chau).mp3" type="audio/mpeg">
+            </audio>
+            <p><strong>Generated</strong></p>
+            <audio controls>
+              <source src="static/audio/Mandarin/generated/朋友 (folk-rock-acoustic-warm-male-resonant-vocal-friendship-anthem).mp3" type="audio/mpeg">
+            </audio>
+          </div>
         </div>
-      </div>
-      
 
+      </div>
     </div>
   </div>
 </section>
+
 
 <!-- Audio Regeneration Comparison for Cantonese Songs -->
 <section class="section hero is-light">
