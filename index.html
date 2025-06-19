@@ -649,7 +649,20 @@
   <style>
     .changed { color: #e74c3c; font-weight: bold; }
     .song-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
-    .song-grid .box { width: 45%; min-width: 300px; display: flex; flex-direction: column; height: 100%; background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    /* .song-grid .box { width: 45%; min-width: 300px; display: flex; flex-direction: column; height: 100%; background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); } */
+    .song-grid .box {
+      width: 30%;
+      min-width: 320px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      flex-shrink: 0;
+    }
+
     .song-content { flex: 1; }
     .song-content audio { width: 100%; margin-bottom: 1rem; }
     .lyrics { background: #fafafa; padding: 1rem; border-radius: 4px; margin-top: 1rem; font-size: 0.9rem; line-height: 1.4; }
