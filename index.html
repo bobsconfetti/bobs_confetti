@@ -308,28 +308,17 @@
 <!-- Audio Regeneration Comparison for Mandarin Songs -->
 <section class="section hero is-light">
   <style>
-    .mandarin-scroll-wrapper {
-      overflow-x: auto;
-      padding-bottom: 1rem;
-    }
-    .song-grid {
-      display: flex;
-      flex-wrap: nowrap;
-      gap: 20px;
-      justify-content: flex-start;
-    }
-    .song-grid .box {
-      width: 23%;
-      min-width: 300px;
-      flex-shrink: 0;
+    /* Equal-height boxes and vertical audio stacking */
+    .changed { color: #e74c3c; font-weight: bold; }
+    .columns .column .box {
       display: flex;
       flex-direction: column;
       height: 100%;
     }
-    .song-content {
+    .box .song-content {
       flex: 1;
     }
-    .song-content audio {
+    .box .song-content audio {
       width: 100%;
       margin-bottom: 1rem;
     }
