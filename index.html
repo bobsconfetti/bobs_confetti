@@ -610,8 +610,22 @@
 <section class="section hero is-light">
   <style>
     .changed { color: #e74c3c; font-weight: bold; }
-    .song-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
-    .song-grid .box { width: 45%; min-width: 300px; display: flex; flex-direction: column; height: 100%; }
+    .song-grid {
+      display: flex;
+      flex-wrap: nowrap; /* prevent wrapping to next line */
+      gap: 20px;
+      justify-content: center;
+      overflow-x: auto; /* enable horizontal scroll if needed */
+      padding-bottom: 1rem;
+    }
+    .song-grid .box {
+      width: 30%;
+      min-width: 320px; /* fallback for small viewports */
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
     .song-content { flex: 1; }
     .song-content audio { width: 100%; margin-bottom: 1rem; }
     .lyrics { background: #fafafa; padding: 1rem; border-radius: 4px; margin-top: 1rem; font-size: 0.9rem; line-height: 1.4; }
@@ -717,7 +731,7 @@ There will be an anthem: get it free
       <!-- Lose Yourself Parody -->
       <div class="box">
         <h3 class="title is-4">
-          《Lose Yourself (Phoneme Mix)》<br>
+          《Lose Yourself》<br>
           <span class="is-size-6 has-text-weight-normal">Artist: Parody</span><br>
           <p class="is-size-7"><em>Genre:</em> humorous phonetic twist on rap</p>
         </h3>
