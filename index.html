@@ -650,13 +650,14 @@
 <section class="section hero is-light">
   <style>
     .changed { color: #e74c3c; font-weight: bold; }
+
     .song-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 15px; /* smaller gap to fit three */
+      gap: 15px;
       justify-content: center;
     }
-    /* .song-grid .box { width: 45%; min-width: 300px; display: flex; flex-direction: column; height: 100%; background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); } */
+
     .song-grid .box {
       width: 31%;
       max-width: 400px;
@@ -673,10 +674,42 @@
 
     .song-content { flex: 1; }
     .song-content audio { width: 100%; margin-bottom: 1rem; }
-    .lyrics { background: #fafafa; padding: 1rem; border-radius: 4px; margin-top: 1rem; font-size: 0.9rem; line-height: 1.4; }
-    .lyrics pre { white-space: pre-wrap; word-break: break-word; }
-    .model-tag { font-size: 0.8rem; color: #888; font-style: italic; margin-top: -0.5rem; margin-bottom: 0.5rem; text-align: center; }
-    @media screen and (max-width: 768px) { .song-grid .box { width: 100%; } }
+
+    .lyrics {
+      background: #fafafa;
+      padding: 1rem;
+      border-radius: 4px;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .lyrics pre {
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .model-tag {
+      font-size: 0.8rem;
+      font-style: italic;
+      margin-top: -0.5rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    .model-yue {
+      color: #006400; /* dark green */
+      font-weight: bold;
+    }
+
+    .model-suno {
+      color: #1e90ff; /* dodger blue */
+      font-weight: bold;
+    }
+
+    @media screen and (max-width: 768px) {
+      .song-grid .box { width: 100%; }
+    }
   </style>
 
   <div class="container is-max-desktop">
@@ -697,11 +730,11 @@
           <audio controls>
             <source src="static/audio/Phoneme/original/月亮代表我的心.mp3" type="audio/mpeg">
           </audio>
-          <p><strong>Modified Audio (YuE)</strong></p>
+          <p><strong>Modified Audio (<span class="model-yue">YuE</span>)</strong></p>
           <audio controls>
             <source src="static/audio/Phoneme/generated/月亮代表我的心_Teresa Teng__tp0@93_T1@0_rp1@1_maxtk8000_eced0844-ca95-4b84-be6a-b5985a99279f_mixed.mp3" type="audio/mpeg">
           </audio>
-          <div class="model-tag">Generated using <strong>YuE</strong></div>
+          <div class="model-tag">Generated using <span class="model-yue">YuE</span></div>
         </div>
         <div class="lyrics">
           <h4>Modified Lyrics</h4>
@@ -740,15 +773,15 @@
           <audio controls>
             <source src="static/audio/Phoneme/original/Let it Be.mp3" type="audio/mpeg">
           </audio>
-          <p><strong>Modified Audio (YuE)</strong></p>
+          <p><strong>Modified Audio (<span class="model-yue">YuE</span>)</strong></p>
           <audio controls>
             <source src="static/audio/Phoneme/generated/Let It Be_The Beatles_pop-comforting-male-gentle-vocal-piano-ballad-soothing-warm-melodic-vocal_tp0@93_T1@0_rp1@1_maxtk8000_99245684-2085-4d52-befa-81b5fa9f7569_mixed.mp3" type="audio/mpeg">
           </audio>
-          <p><strong>Modified Audio (SUNO)</strong></p>
+          <p><strong>Modified Audio (<span class="model-suno">SUNO</span>)</strong></p>
           <audio controls>
             <source src="static/audio/Phoneme/generated/Let-it-be-parody-SUNO.mp3" type="audio/mpeg">
           </audio>
-          <div class="model-tag">Generated using <strong>YuE and SUNO</strong></div>
+          <div class="model-tag">Generated using <span class="model-yue">YuE</span> and <span class="model-suno">SUNO</span></div>
         </div>
         <div class="lyrics">
           <h4>Modified Lyrics</h4>
@@ -789,11 +822,11 @@ There will be an anthem: get it free
           <audio controls>
             <source src="static/audio/Phoneme/original/Lose Yourself.mp3" type="audio/mpeg">
           </audio>
-          <p><strong>Modified Audio (SUNO)</strong></p>
+          <p><strong>Modified Audio (<span class="model-suno">SUNO</span>)</strong></p>
           <audio controls>
             <source src="static/audio/Phoneme/generated/lose-yourself-parody-SUNO.mp3" type="audio/mpeg">
           </audio>
-          <div class="model-tag">Generated using <strong>SUNO</strong></div>
+          <div class="model-tag">Generated using <span class="model-suno">SUNO</span></div>
         </div>
         <div class="lyrics">
           <h4>Modified Lyrics</h4>
