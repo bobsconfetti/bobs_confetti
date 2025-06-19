@@ -140,27 +140,6 @@
   </div>
 </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <source src="static/videos/Lose_Yourself_original.mp4"
-        type="video/mp4">
-      </video>
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <source src="static/videos/Lose_Yourself_parody.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -625,7 +604,7 @@
   </style>
 
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Phoneme Variants (Original & Modified Audio)</h2>
+    <h2 class="title is-3 has-text-centered">Phoneme Variants</h2>
     <p class="has-text-centered">Subtle lyric swaps preserve phonetic patterns. Changed words are highlighted in red.</p>
 
     <div class="song-grid">
@@ -770,6 +749,72 @@ Better go rapture this component and hope it don't trap him
     </div>
   </div>
 </section>
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <style>
+    .video-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .video-grid .video-block {
+      width: 48%;
+      min-width: 320px;
+    }
+
+    .video-block video {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .video-title {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      .video-grid .video-block {
+        width: 100%;
+      }
+    }
+  </style>
+
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title is-3 has-text-centered">Video Comparison: Original vs Phoneme Parody</h2>
+
+      <div class="video-grid">
+
+        <!-- Original -->
+        <div class="video-block">
+          <video autoplay controls muted loop>
+            <source src="static/videos/Lose_Yourself_original.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-title">🎤 Original "Lose Yourself" (Lyrics by Eminem)</div>
+        </div>
+
+        <!-- Parody -->
+        <div class="video-block">
+          <video autoplay controls muted loop>
+            <source src="static/videos/Lose_Yourself_parody.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-title">🎭 Phoneme Parody Version (Generated Lyrics)</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
 
 
 <!-- Image carousel -->
