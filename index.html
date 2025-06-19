@@ -612,19 +612,21 @@
     .changed { color: #e74c3c; font-weight: bold; }
     .song-grid {
       display: flex;
-      flex-wrap: nowrap; /* prevent wrapping to next line */
-      gap: 20px;
+      flex-wrap: nowrap; /* keep all in one row */
+      gap: 30px; /* add spacing between them */
       justify-content: center;
-      overflow-x: auto; /* enable horizontal scroll if needed */
-      padding-bottom: 1rem;
+      overflow-x: auto;
+      padding: 1rem 0;
     }
+
     .song-grid .box {
-      width: 30%;
-      min-width: 320px; /* fallback for small viewports */
+      width: 33%;
+      min-width: 360px; /* allow decent size on smaller screens */
       flex-shrink: 0;
       display: flex;
       flex-direction: column;
       height: 100%;
+      padding: 1.5rem;
     }
     .song-content { flex: 1; }
     .song-content audio { width: 100%; margin-bottom: 1rem; }
