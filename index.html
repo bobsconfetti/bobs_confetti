@@ -308,26 +308,46 @@
 <!-- Audio Regeneration Comparison for Mandarin Songs -->
 <section class="section hero is-light">
   <style>
-    /* Equal-height boxes and vertical audio stacking */
-    .changed { color: #e74c3c; font-weight: bold; }
-    .columns .column .box {
+    .mandarin-scroll-wrapper {
+      overflow-x: auto;
+      padding-bottom: 1rem;
+    }
+
+    .mandarin-song-grid {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 20px;
+      justify-content: flex-start;
+    }
+
+    .mandarin-song-grid .box {
+      width: 320px;
+      flex-shrink: 0;
       display: flex;
       flex-direction: column;
       height: 100%;
+      padding: 1rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
-    .box .song-content {
-      flex: 1;
-    }
+
     .box .song-content audio {
       width: 100%;
       margin-bottom: 1rem;
+    }
+
+    .changed {
+      color: #e74c3c;
+      font-weight: bold;
     }
   </style>
 
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Mandarin Songs</h2>
     <div class="mandarin-scroll-wrapper">
-      <div class="song-grid">
+      <div class="mandarin-song-grid">
+
 
         <!-- 天后 -->
         <div class="box">
