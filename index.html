@@ -327,16 +327,13 @@
   <style>
     .song-grid {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       gap: 20px;
       justify-content: center;
     }
     .song-grid .box {
-      width: 45%;
-      min-width: 300px;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
+      width: 23%; /* roughly 4 columns = 4 x 23% + gap */
+      min-width: 220px; /* optional */
     }
     .song-content {
       flex: 1;
