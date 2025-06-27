@@ -158,6 +158,19 @@
   </ul>
 </nav> -->
 
+<!-- Content -->
+<div class="tabs is-toggle is-toggle-rounded is-fullwidth">
+  <ul>
+    <li class="is-active"><a href="#abstract">Abstract</a></li>
+    <li><a href="#veo3">Veo 3 Generation</a></li>
+    <li><a href="#english-songs">English (Billboard)</a></li>
+    <li><a href="#mandarin-songs">Mandarin Songs</a></li>
+    <li><a href="#cantonese-songs">Cantonese Songs</a></li>
+    <li><a href="#hou-lai">《后来》 (Hòu Lái)</a></li>
+    <li><a href="#phoneme-variants">Phoneme Variants</a></li>
+  </ul>
+</div>
+
 <!-- Paper abstract -->
 <section id="abstract" class="section hero is-light">
   <div class="container is-max-desktop">
@@ -174,19 +187,6 @@
   </div>
 </section>
 <!-- End paper abstract -->
-
-<!-- Content -->
-<div class="tabs is-toggle is-toggle-rounded is-fullwidth">
-  <ul>
-    <li class="is-active"><a href="#abstract">Abstract</a></li>
-    <li><a href="#veo3">Veo 3 Generation</a></li>
-    <li><a href="#english-songs">English (Billboard)</a></li>
-    <li><a href="#mandarin-songs">Mandarin Songs</a></li>
-    <li><a href="#cantonese-songs">Cantonese Songs</a></li>
-    <li><a href="#hou-lai">《后来》 (Hòu Lái)</a></li>
-    <li><a href="#phoneme-variants">Phoneme Variants</a></li>
-  </ul>
-</div>
 
 <!-- Veo 3-->
 <section id="veo3" class="hero teaser">
@@ -253,6 +253,219 @@
   </div>
 </section>
 <!-- End teaser video -->
+
+<!-- Phoneme Variants: Original & Modified Audio with Highlights -->
+<section id="phoneme-variants" class="section hero is-light">
+  <style>
+    .changed { color: #e74c3c; font-weight: bold; }
+
+    .song-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .song-grid .box {
+      width: 31%;
+      max-width: 400px;
+      min-width: 280px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      flex-shrink: 0;
+    }
+
+    .song-content { flex: 1; }
+    .song-content audio { width: 100%; margin-bottom: 1rem; }
+
+    .lyrics {
+      background: #fafafa;
+      padding: 1rem;
+      border-radius: 4px;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .lyrics pre {
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .model-tag {
+      font-size: 0.8rem;
+      font-style: italic;
+      margin-top: -0.5rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    .model-yue {
+      color: #ea9412; /* dark green */
+      font-weight: bold;
+    }
+
+    .model-suno {
+      color: #1e90ff; /* dodger blue */
+      font-weight: bold;
+    }
+
+    @media screen and (max-width: 768px) {
+      .song-grid .box { width: 100%; }
+    }
+  </style>
+
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Phoneme Variants</h2>
+    <p class="has-text-centered">Subtle lyric swaps preserve phonetic patterns. Changed words are highlighted in red.</p>
+
+    <div class="song-grid">
+
+      <!-- 月亮代表我的心 -->
+      <div class="box">
+        <h3 class="title is-4">
+          《月亮代表我的心》<br>
+          <span class="is-size-6 has-text-weight-normal">Artist: Teresa Teng</span><br>
+          <p class="is-size-7"><em>Genre:</em> N/A</p>
+        </h3>
+        <div class="content song-content has-text-centered">
+          <p><strong>Original Audio</strong></p>
+          <audio controls>
+            <source src="static/audio/Phoneme/original/月亮代表我的心.mp3" type="audio/mpeg">
+          </audio>
+          <p><strong>Modified Audio (<span class="model-yue">YuE</span>)</strong></p>
+          <audio controls>
+            <source src="static/audio/Phoneme/generated/月亮代表我的心_Teresa Teng__tp0@93_T1@0_rp1@1_maxtk8000_eced0844-ca95-4b84-be6a-b5985a99279f_mixed.mp3" type="audio/mpeg">
+          </audio>
+          <div class="model-tag">Generated using <span class="model-yue">YuE</span></div>
+        </div>
+        <div class="lyrics">
+          <h4>Modified Lyrics</h4>
+          <pre>
+[verse]
+你问我爱你有多深
+我爱你有几分
+
+[chorus]
+我的情也真
+我的爱也真
+月亮代表我的心
+
+[verse]
+你问我爱你有多深
+我爱你有几分
+
+[chorus]
+<span class="changed">我的情不移</span>
+<span class="changed">我的爱不变</span>
+月亮代表我的心
+          </pre>
+          <p><strong>Modification:</strong> In the second chorus, “我的情也真” → <span class="changed">“我的情不移”</span> and “我的爱也真” → <span class="changed">“我的爱不变”</span>, preserving the original tonal contour.</p>
+        </div>
+      </div>
+
+      <!-- Let It Be -->
+      <div class="box">
+        <h3 class="title is-4">
+          《Let It Be》<br>
+          <span class="is-size-6 has-text-weight-normal">Artist: The Beatles</span><br>
+          <p class="is-size-7"><em>Genre:</em> pop comforting male gentle vocal piano ballad soothing warm melodic vocal</p>
+        </h3>
+        <div class="content song-content has-text-centered">
+          <p><strong>Original Audio</strong></p>
+          <audio controls>
+            <source src="static/audio/Phoneme/original/Let it Be.mp3" type="audio/mpeg">
+          </audio>
+          <p><strong>Modified Audio (<span class="model-yue">YuE</span>)</strong></p>
+          <audio controls>
+            <source src="static/audio/Phoneme/generated/Let It Be_The Beatles_pop-comforting-male-gentle-vocal-piano-ballad-soothing-warm-melodic-vocal_tp0@93_T1@0_rp1@1_maxtk8000_99245684-2085-4d52-befa-81b5fa9f7569_mixed.mp3" type="audio/mpeg">
+          </audio>
+          <p><strong>Modified Audio (<span class="model-suno">SUNO</span>)</strong></p>
+          <audio controls>
+            <source src="static/audio/Phoneme/generated/Let-it-be-parody-SUNO.mp3" type="audio/mpeg">
+          </audio>
+          <div class="model-tag">Generated using <span class="model-yue">YuE</span> and <span class="model-suno">SUNO</span></div>
+        </div>
+        <div class="lyrics">
+          <h4>Modified Lyrics</h4>
+          <pre>
+[verse]
+When I <span class="changed">bind</span> myself in <span class="changed">lines of rubble</span>
+<span class="changed">Other fairy</span> comes to me
+<span class="changed">Sneaking terms of vision: get it free</span>
+And in my power of starkness
+She is handing right above me
+<span class="changed">Squeaking terms of vision: get it free</span>
+
+[chorus]
+<span class="changed">Get it free, get it free, bet it's me, let it see</span>
+Mister's words are given,<span class="changed"> get it free</span>
+
+[verse]
+And when the spoken-hearted people
+Giving in the whirl agree
+<span class="changed">There will be an anthem: get it free</span>
+For though they may be started
+There is still a dance that they will be
+There will be an anthem: get it free
+          </pre>
+          <p><strong>Modification:</strong> Phoneme swaps preserve rhythmic flow and syllabic shape while replacing original phrases with sound-alike surrogates. Includes transformations like “find”→<span class="changed">“bind”</span>, “times of trouble”→<span class="changed">“lines of rubble”</span>, and “let it be”→<span class="changed">“get it free”</span>.</p>
+        </div>
+      </div>
+
+      <!-- Lose Yourself Parody -->
+      <div class="box">
+        <h3 class="title is-4">
+          《Lose Yourself》<br>
+          <span class="is-size-6 has-text-weight-normal">Artist: Parody</span><br>
+          <p class="is-size-7"><em>Genre:</em> humorous phonetic twist on rap</p>
+        </h3>
+        <div class="content song-content has-text-centered">
+          <p><strong>Original Audio</strong></p>
+          <audio controls>
+            <source src="static/audio/Phoneme/original/Lose Yourself.mp3" type="audio/mpeg">
+          </audio>
+          <p><strong>Modified Audio (<span class="model-suno">SUNO</span>)</strong></p>
+          <audio controls>
+            <source src="static/audio/Phoneme/generated/lose-yourself-parody-SUNO.mp3" type="audio/mpeg">
+          </audio>
+          <div class="model-tag">Generated using <span class="model-suno">SUNO</span></div>
+        </div>
+        <div class="lyrics">
+          <h4>Modified Lyrics</h4>
+          <pre>
+His pants are sweaty, <span class="changed">cheese weak</span>, cars are heavy  
+There's yogurt on his letter already, <span class="changed">Bob's confetti</span>  
+He's cursive, but on the service, he looks <span class="changed">clam and ready</span>  
+To shop moms, but he keeps on betting  
+
+What he wrote clown, the whole cloud goes <span class="changed">so proud</span>  
+He opens his snout, but the birds won't come out  
+He's smokin', how? Everybody's pokin' now  
+The sock's run out, lime's up, over, meow  
+
+Snap back <span class="changed">toality</span>, rope, there goes cavity  
+Rope, there goes Rabbit, he joked, he's so glad  
+But he won't give up that sleepy, no, he won't have it  
+He knows his whole snack's to these hopes, it don't chatter  
+
+He's soap, he knows that, but he's woke, he's so tragic  
+He knows when he goes back to this noble dome, that's when it's  
+Back to the crab again, yo, this bold tragedy  
+Better go rapture this component and hope it don't trap him  
+          </pre>
+          <p><strong>Modification:</strong> Nearly every line is altered to preserve phoneme contours while introducing absurd or satirical replacements. This is a full-scale parody generated with phonetic alignment to Eminem’s flow.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
 <!-- Audio Regeneration Comparison for English Songs -->
@@ -736,220 +949,6 @@
           <audio controls>
             <source src="static/audio/Mandarin/generated/后来 (N:A).mp3" type="audio/mpeg">
           </audio>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- Phoneme Variants: Original & Modified Audio with Highlights -->
-<section id="phoneme-variants" class="section hero is-light">
-  <style>
-    .changed { color: #e74c3c; font-weight: bold; }
-
-    .song-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-    }
-
-    .song-grid .box {
-      width: 31%;
-      max-width: 400px;
-      min-width: 280px;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      background: white;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      flex-shrink: 0;
-    }
-
-    .song-content { flex: 1; }
-    .song-content audio { width: 100%; margin-bottom: 1rem; }
-
-    .lyrics {
-      background: #fafafa;
-      padding: 1rem;
-      border-radius: 4px;
-      margin-top: 1rem;
-      font-size: 0.9rem;
-      line-height: 1.4;
-    }
-
-    .lyrics pre {
-      white-space: pre-wrap;
-      word-break: break-word;
-    }
-
-    .model-tag {
-      font-size: 0.8rem;
-      font-style: italic;
-      margin-top: -0.5rem;
-      margin-bottom: 0.5rem;
-      text-align: center;
-    }
-
-    .model-yue {
-      color: #ea9412; /* dark green */
-      font-weight: bold;
-    }
-
-    .model-suno {
-      color: #1e90ff; /* dodger blue */
-      font-weight: bold;
-    }
-
-    @media screen and (max-width: 768px) {
-      .song-grid .box { width: 100%; }
-    }
-  </style>
-
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Phoneme Variants</h2>
-    <p class="has-text-centered">Subtle lyric swaps preserve phonetic patterns. Changed words are highlighted in red.</p>
-
-    <div class="song-grid">
-
-      <!-- 月亮代表我的心 -->
-      <div class="box">
-        <h3 class="title is-4">
-          《月亮代表我的心》<br>
-          <span class="is-size-6 has-text-weight-normal">Artist: Teresa Teng</span><br>
-          <p class="is-size-7"><em>Genre:</em> N/A</p>
-        </h3>
-        <div class="content song-content has-text-centered">
-          <p><strong>Original Audio</strong></p>
-          <audio controls>
-            <source src="static/audio/Phoneme/original/月亮代表我的心.mp3" type="audio/mpeg">
-          </audio>
-          <p><strong>Modified Audio (<span class="model-yue">YuE</span>)</strong></p>
-          <audio controls>
-            <source src="static/audio/Phoneme/generated/月亮代表我的心_Teresa Teng__tp0@93_T1@0_rp1@1_maxtk8000_eced0844-ca95-4b84-be6a-b5985a99279f_mixed.mp3" type="audio/mpeg">
-          </audio>
-          <div class="model-tag">Generated using <span class="model-yue">YuE</span></div>
-        </div>
-        <div class="lyrics">
-          <h4>Modified Lyrics</h4>
-          <pre>
-[verse]
-你问我爱你有多深
-我爱你有几分
-
-[chorus]
-我的情也真
-我的爱也真
-月亮代表我的心
-
-[verse]
-你问我爱你有多深
-我爱你有几分
-
-[chorus]
-<span class="changed">我的情不移</span>
-<span class="changed">我的爱不变</span>
-月亮代表我的心
-          </pre>
-          <p><strong>Modification:</strong> In the second chorus, “我的情也真” → <span class="changed">“我的情不移”</span> and “我的爱也真” → <span class="changed">“我的爱不变”</span>, preserving the original tonal contour.</p>
-        </div>
-      </div>
-
-      <!-- Let It Be -->
-      <div class="box">
-        <h3 class="title is-4">
-          《Let It Be》<br>
-          <span class="is-size-6 has-text-weight-normal">Artist: The Beatles</span><br>
-          <p class="is-size-7"><em>Genre:</em> pop comforting male gentle vocal piano ballad soothing warm melodic vocal</p>
-        </h3>
-        <div class="content song-content has-text-centered">
-          <p><strong>Original Audio</strong></p>
-          <audio controls>
-            <source src="static/audio/Phoneme/original/Let it Be.mp3" type="audio/mpeg">
-          </audio>
-          <p><strong>Modified Audio (<span class="model-yue">YuE</span>)</strong></p>
-          <audio controls>
-            <source src="static/audio/Phoneme/generated/Let It Be_The Beatles_pop-comforting-male-gentle-vocal-piano-ballad-soothing-warm-melodic-vocal_tp0@93_T1@0_rp1@1_maxtk8000_99245684-2085-4d52-befa-81b5fa9f7569_mixed.mp3" type="audio/mpeg">
-          </audio>
-          <p><strong>Modified Audio (<span class="model-suno">SUNO</span>)</strong></p>
-          <audio controls>
-            <source src="static/audio/Phoneme/generated/Let-it-be-parody-SUNO.mp3" type="audio/mpeg">
-          </audio>
-          <div class="model-tag">Generated using <span class="model-yue">YuE</span> and <span class="model-suno">SUNO</span></div>
-        </div>
-        <div class="lyrics">
-          <h4>Modified Lyrics</h4>
-          <pre>
-[verse]
-When I <span class="changed">bind</span> myself in <span class="changed">lines of rubble</span>
-<span class="changed">Other fairy</span> comes to me
-<span class="changed">Sneaking terms of vision: get it free</span>
-And in my power of starkness
-She is handing right above me
-<span class="changed">Squeaking terms of vision: get it free</span>
-
-[chorus]
-<span class="changed">Get it free, get it free, bet it's me, let it see</span>
-Mister's words are given,<span class="changed"> get it free</span>
-
-[verse]
-And when the spoken-hearted people
-Giving in the whirl agree
-<span class="changed">There will be an anthem: get it free</span>
-For though they may be started
-There is still a dance that they will be
-There will be an anthem: get it free
-          </pre>
-          <p><strong>Modification:</strong> Phoneme swaps preserve rhythmic flow and syllabic shape while replacing original phrases with sound-alike surrogates. Includes transformations like “find”→<span class="changed">“bind”</span>, “times of trouble”→<span class="changed">“lines of rubble”</span>, and “let it be”→<span class="changed">“get it free”</span>.</p>
-        </div>
-      </div>
-
-      <!-- Lose Yourself Parody -->
-      <div class="box">
-        <h3 class="title is-4">
-          《Lose Yourself》<br>
-          <span class="is-size-6 has-text-weight-normal">Artist: Parody</span><br>
-          <p class="is-size-7"><em>Genre:</em> humorous phonetic twist on rap</p>
-        </h3>
-        <div class="content song-content has-text-centered">
-          <p><strong>Original Audio</strong></p>
-          <audio controls>
-            <source src="static/audio/Phoneme/original/Lose Yourself.mp3" type="audio/mpeg">
-          </audio>
-          <p><strong>Modified Audio (<span class="model-suno">SUNO</span>)</strong></p>
-          <audio controls>
-            <source src="static/audio/Phoneme/generated/lose-yourself-parody-SUNO.mp3" type="audio/mpeg">
-          </audio>
-          <div class="model-tag">Generated using <span class="model-suno">SUNO</span></div>
-        </div>
-        <div class="lyrics">
-          <h4>Modified Lyrics</h4>
-          <pre>
-His pants are sweaty, <span class="changed">cheese weak</span>, cars are heavy  
-There's yogurt on his letter already, <span class="changed">Bob's confetti</span>  
-He's cursive, but on the service, he looks <span class="changed">clam and ready</span>  
-To shop moms, but he keeps on betting  
-
-What he wrote clown, the whole cloud goes <span class="changed">so proud</span>  
-He opens his snout, but the birds won't come out  
-He's smokin', how? Everybody's pokin' now  
-The sock's run out, lime's up, over, meow  
-
-Snap back <span class="changed">toality</span>, rope, there goes cavity  
-Rope, there goes Rabbit, he joked, he's so glad  
-But he won't give up that sleepy, no, he won't have it  
-He knows his whole snack's to these hopes, it don't chatter  
-
-He's soap, he knows that, but he's woke, he's so tragic  
-He knows when he goes back to this noble dome, that's when it's  
-Back to the crab again, yo, this bold tragedy  
-Better go rapture this component and hope it don't trap him  
-          </pre>
-          <p><strong>Modification:</strong> Nearly every line is altered to preserve phoneme contours while introducing absurd or satirical replacements. This is a full-scale parody generated with phonetic alignment to Eminem’s flow.</p>
         </div>
       </div>
 
