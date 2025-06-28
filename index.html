@@ -188,38 +188,46 @@
 </section>
 <!-- End paper abstract -->
 
-<!-- Veo 3-->
 <section id="veo3" class="hero teaser">
   <style>
-    .video-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
+    .video-section-title {
+      text-align: center;
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 2rem 0 1rem;
     }
 
-    .video-grid .video-block {
-      width: 63%;
-      min-width: 320px;
+    .video-pair {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 2rem;
+    }
+
+    .video-block {
+      flex: 1 1 300px;
+      max-width: 400px;
+      text-align: center;
     }
 
     .video-block video {
-      width: 45%;
+      width: 100%;
       height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     .video-title {
-      text-align: center;
-      font-weight: bold;
       margin-top: 0.5rem;
-      font-size: 1rem;
+      font-weight: bold;
+      font-size: 0.95rem;
     }
 
     @media screen and (max-width: 768px) {
-      .video-grid .video-block {
-        width: 100%;
+      .video-pair {
+        flex-direction: column;
+        align-items: center;
       }
     }
   </style>
@@ -228,49 +236,48 @@
     <div class="hero-body">
       <h3 class="title is-3 has-text-centered">Video Generation (Veo 3): Original vs Phoneme Parody</h3>
 
-      <div class="video-grid">
-
-        <!-- Original -->
+      <!-- Lose Yourself Pair -->
+      <div class="video-section-title">🎤 “Lose Yourself” Variants</div>
+      <div class="video-pair">
         <div class="video-block">
           <video autoplay controls muted loop>
             <source src="static/videos/Lose_Yourself_original.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-          <div class="video-title">🎤 "Lose Yourself" (Original Lyrics by Eminem)</div>
+          <div class="video-title">🎤 Original Lyrics by Eminem</div>
         </div>
-
-        <!-- Parody -->
         <div class="video-block">
           <video autoplay controls muted loop>
             <source src="static/videos/Lose_Yourself_parody.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-          <div class="video-title">🎭 "Lose Yourself" (Phoneme Modified Lyrics)</div>
+          <div class="video-title">🎭 Phoneme Modified Lyrics</div>
         </div>
+      </div>
 
-        <!-- Parody -->
+      <!-- Jingle Bell Pair -->
+      <div class="video-section-title">🎄 “Jingle Bell” Phoneme Parodies</div>
+      <div class="video-pair">
         <div class="video-block">
           <video autoplay controls muted loop>
             <source src="static/videos/Jingle Bell (Flashing).mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-          <div class="video-title">🎭 "Jingle Bell" (Phoneme Modified Lyrics 1)</div>
+          <div class="video-title">🎭 Modified Lyrics 1</div>
         </div>
-
-        <!-- Parody -->
         <div class="video-block">
           <video autoplay controls muted loop>
             <source src="static/videos/Jingle Bell (Jingle).mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-          <div class="video-title">🎭 "Jingle Bell" (Phoneme Modified Lyrics 2)</div>
+          <div class="video-title">🎭 Modified Lyrics 2</div>
         </div>
-
       </div>
+
     </div>
   </div>
 </section>
-<!-- End teaser video -->
+
 
 <!-- Phoneme Variants: Original & Modified Audio with Highlights -->
 <section id="phoneme-variants" class="section hero is-light">
