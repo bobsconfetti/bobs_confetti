@@ -293,6 +293,7 @@
 
 
 <!-- Phoneme Variants: Original & Modified Audio with Highlights -->
+<!-- Phoneme Variants: Original & Modified Audio with Highlights -->
 <section id="phoneme-variants" class="section hero is-light">
   <style>
     .changed { color: #e74c3c; font-weight: bold; }
@@ -302,20 +303,21 @@
       flex-wrap: wrap;
       gap: 15px;
       justify-content: center;
+      max-width: 1600px;
+      margin: 0 auto;
     }
 
     .song-grid .box {
-      width: 100%;
-      max-width: 400px;
-      min-width: 280px;
+      flex: 1 1 350px;
+      max-width: 500px;
+      min-width: 300px;
       display: flex;
       flex-direction: column;
       height: 100%;
       background: white;
-      padding: 1rem;
+      padding: 1.2rem;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      flex-shrink: 0;
     }
 
     .song-content { flex: 1; }
@@ -324,10 +326,12 @@
     .lyrics {
       background: #fafafa;
       padding: 1rem;
-      border-radius: 4px;
+      border-radius: 6px;
       margin-top: 1rem;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       line-height: 1.4;
+      max-height: 250px;
+      overflow-y: auto;
     }
 
     .lyrics pre {
@@ -344,17 +348,39 @@
     }
 
     .model-yue {
-      color: #ea9412; /* dark green */
+      color: #ea9412;
       font-weight: bold;
     }
 
     .model-suno {
-      color: #1e90ff; /* dodger blue */
+      color: #1e90ff;
       font-weight: bold;
     }
 
+    @media screen and (max-width: 1200px) {
+      .song-grid .box { 
+        flex: 1 1 300px;
+        max-width: 450px;
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      .song-grid { 
+        gap: 12px;
+      }
+      .song-grid .box { 
+        flex: 1 1 280px;
+        max-width: 400px;
+        font-size: 0.9rem;
+      }
+    }
+
     @media screen and (max-width: 768px) {
-      .song-grid .box { width: 100%; }
+      .song-grid .box { 
+        flex: 1 1 100%;
+        max-width: none;
+        min-width: 280px;
+      }
     }
   </style>
 
@@ -403,7 +429,7 @@
 <span class="changed">我的爱不变</span>
 月亮代表我的心
           </pre>
-          <p><strong>Modification:</strong> In the second chorus, “我的情也真” → <span class="changed">“我的情不移”</span> and “我的爱也真” → <span class="changed">“我的爱不变”</span>, preserving the original tonal contour.</p>
+          <p><strong>Modification:</strong> In the second chorus, "我的情也真" → <span class="changed">"我的情不移"</span> and "我的爱也真" → <span class="changed">"我的爱不变"</span>, preserving the original tonal contour.</p>
         </div>
       </div>
 
@@ -452,7 +478,7 @@ For though they may be started
 There is still a dance that they will be
 There will be an anthem: get it free
           </pre>
-          <p><strong>Modification:</strong> Phoneme swaps preserve rhythmic flow and syllabic shape while replacing original phrases with sound-alike surrogates. Includes transformations like “find”→<span class="changed">“bind”</span>, “times of trouble”→<span class="changed">“lines of rubble”</span>, and “let it be”→<span class="changed">“get it free”</span>.</p>
+          <p><strong>Modification:</strong> Phoneme swaps preserve rhythmic flow and syllabic shape while replacing original phrases with sound-alike surrogates. Includes transformations like "find"→<span class="changed">"bind"</span>, "times of trouble"→<span class="changed">"lines of rubble"</span>, and "let it be"→<span class="changed">"get it free"</span>.</p>
         </div>
       </div>
 
@@ -497,7 +523,7 @@ He knows when he goes back to this noble dome, that's when it's
 Back to the crab again, yo, this bold tragedy  
 Better go rapture this component and hope it don't trap him  
           </pre>
-          <p><strong>Modification:</strong> Nearly every line is altered to preserve phoneme contours while introducing absurd or satirical replacements. This is a full-scale parody generated with phonetic alignment to Eminem’s flow.</p>
+          <p><strong>Modification:</strong> Nearly every line is altered to preserve phoneme contours while introducing absurd or satirical replacements. This is a full-scale parody generated with phonetic alignment to Eminem's flow.</p>
         </div>
       </div>
 
