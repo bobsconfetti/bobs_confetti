@@ -238,29 +238,38 @@
     <div class="hero-body">
       <h3 class="title is-3 has-text-centered">Video Generation (Veo 3): Original vs Phoneme Parody</h3>
 
-      <!-- Lose Yourself - All Variants in One Row -->
+      <!-- Lose Yourself - Original Left, Generated Stacked Right -->
       <div class="video-section-title">🎤 "Lose Yourself" - Complete Comparison</div>
-      <div class="video-pair" style="justify-content: center; max-width: 1400px; margin: 0 auto;">
-        <div class="video-block">
+      <div style="display: flex; gap: 30px; align-items: center; justify-content: center; max-width: 1200px; margin: 0 auto; flex-wrap: wrap;">
+        <!-- Original Video - Left Column -->
+        <div class="video-block" style="flex: 1; max-width: 500px; min-width: 350px;">
           <video autoplay controls muted loop>
             <source src="static/videos/Eminem - Lose Yourself (online-video-cutter.com).mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
           <div class="video-title">🎬 Original Music Video</div>
         </div>
-        <div class="video-block">
-          <video autoplay controls muted loop>
-            <source src="static/videos/Lose_Yourself_original.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <div class="video-title">🎤 Generated with Original Lyrics</div>
-        </div>
-        <div class="video-block">
-          <video autoplay controls muted loop>
-            <source src="static/videos/Lose_Yourself_parody.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <div class="video-title">🎭 Generated with Phoneme Modified Lyrics</div>
+        
+        <!-- Separator Line -->
+        <div style="width: 2px; height: 400px; background: linear-gradient(to bottom, transparent, #ddd 20%, #ddd 80%, transparent); flex-shrink: 0; margin: 0 15px;"></div>
+        
+        <!-- Generated Videos - Right Column (Stacked) -->
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 20px; max-width: 500px; min-width: 350px;">
+          <div class="video-block">
+            <video autoplay controls muted loop>
+              <source src="static/videos/Lose_Yourself_original.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="video-title">🎤 Generated with Original Lyrics</div>
+          </div>
+          
+          <div class="video-block">
+            <video autoplay controls muted loop>
+              <source src="static/videos/Lose_Yourself_parody.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="video-title">🎭 Generated with Phoneme Modified Lyrics</div>
+          </div>
         </div>
       </div>
 
