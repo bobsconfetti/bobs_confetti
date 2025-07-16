@@ -770,329 +770,387 @@
 </section>
 
 <!-- Pop Phoneme Variants with Visible Transformations -->
-<section id="phoneme-variants" class="section hero is-light">
-  <style>
-    .changed { color: #e74c3c; font-weight: bold; }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop Phoneme Variants</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa;
+        }
 
-    .song-grid {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 15px;
-      justify-content: center;
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-
-    .song-grid .box {
-      width: 100%;
-      max-width: none;
-      min-width: 280px;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      background: white;
-      padding: 1.2rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      grid-column: span 2;
-    }
-
-    /* Second row: center the last two items */
-    .song-grid .box:nth-child(4) {
-      grid-column: 2 / 4;
-    }
-    
-    .song-grid .box:nth-child(5) {
-      grid-column: 4 / 6;
-    }
-
-    .song-content { flex: 1; }
-    .song-content audio { width: 100%; margin-bottom: 1rem; }
-
-    .key-transformations {
-      background: #e8f5e8;
-      border: 1px solid #c3e6c3;
-      border-radius: 8px;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      font-size: 0.9rem;
-    }
-
-    .key-transformations h5 {
-      margin-top: 0;
-      margin-bottom: 0.5rem;
-      color: #2d5016;
-      font-size: 0.95rem;
-      font-weight: bold;
-    }
-
-    .transformation-item {
-      display: inline-block;
-      margin: 0.2rem 0.5rem 0.2rem 0;
-      padding: 0.2rem 0.5rem;
-      background: #f8f9fa;
-      border-radius: 4px;
-      border: 1px solid #e9ecef;
-      font-size: 0.85rem;
-    }
-
-    .lyrics {
-      background: #fafafa;
-      padding: 1rem;
-      border-radius: 6px;
-      margin-top: 1rem;
-      font-size: 0.85rem;
-      line-height: 1.4;
-      max-height: 200px;
-      overflow-y: auto;
-    }
-
-    .lyrics pre {
-      white-space: pre-wrap;
-      word-break: break-word;
-    }
-
-    .model-tag {
-      font-size: 0.8rem;
-      font-style: italic;
-      margin-top: -0.5rem;
-      margin-bottom: 0.5rem;
-      text-align: center;
-    }
-
-    .model-yue {
-      color: #ea9412;
-      font-weight: bold;
-    }
-
-    .model-suno {
-      color: #1e90ff;
-      font-weight: bold;
-    }
-
-    @media screen and (max-width: 1200px) {
-      .song-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
-      
-      .song-grid .box {
-        grid-column: span 2;
-      }
-      
-      .song-grid .box:nth-child(4),
-      .song-grid .box:nth-child(5) {
-        grid-column: span 2;
-      }
-    }
-
-    @media screen and (max-width: 768px) {
-      .song-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
-      }
-      
-      .song-grid .box,
-      .song-grid .box:nth-child(4),
-      .song-grid .box:nth-child(5) {
-        grid-column: 1;
-      }
-    }
-  </style>
-
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">🎭 Pop Phoneme Variants</h2>
-    <p class="has-text-centered">Subtle lyric swaps preserve phonetic patterns. Changed words are highlighted in red.</p>
-
-    <div class="song-grid">
-
-      <!-- 月亮代表我的心 -->
-      <div class="box">
-        <h3 class="title is-4">
-          《月亮代表我的心》<br>
-          <span class="is-size-6 has-text-weight-normal">Artist: Teresa Teng</span>
-        </h3>
+        .changed { 
+            color: #e74c3c; 
+            font-weight: bold; 
+        }
         
-        <div class="key-transformations">
-          <h5>🎯 Key Transformations:</h5>
-          <div class="transformation-item">"我的情也真" → <span class="changed">"我的情不移"</span></div>
-          <div class="transformation-item">"我的爱也真" → <span class="changed">"我的爱不变"</span></div>
-        </div>
-        
-        <div class="content song-content has-text-centered">
-          <p><strong>Original Audio</strong></p>
-          <audio controls>
-            <source src="static/audio/Phoneme/original/月亮代表我的心.mp3" type="audio/mpeg">
-          </audio>
-          <p><strong>Modified Audio (<span class="model-yue">YuE</span>)</strong></p>
-          <audio controls>
-            <source src="static/audio/Phoneme/generated/月亮代表我的心_Teresa Teng__tp0@93_T1@0_rp1@1_maxtk8000_eced0844-ca95-4b84-be6a-b5985a99279f_mixed.mp3" type="audio/mpeg">
-          </audio>
-          <div class="model-tag">Generated using <span class="model-yue">YuE</span></div>
-        </div>
-        
-        <div class="lyrics">
-          <h4>Sample Modified Lyrics</h4>
-          <p>你问我爱你有多深<br>
-          我爱你有几分<br><br>
-          我的情也真<br>
-          我的爱也真<br>
-          月亮代表我的心<br><br>
-          [Second chorus:]<br>
-          <span class="changed">我的情不移</span><br>
-          <span class="changed">我的爱不变</span><br>
-          月亮代表我的心</p>
-        </div>
-      </div>
+        .pop-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
 
-      <!-- Let It Be -->
-      <div class="box">
-        <h3 class="title is-4">
-          《Let It Be》<br>
-          <span class="is-size-6 has-text-weight-normal">Artist: The Beatles</span>
-        </h3>
-        
-        <div class="key-transformations">
-          <h5>🎯 Key Transformations:</h5>
-          <div class="transformation-item">"find" → <span class="changed">"bind"</span></div>
-          <div class="transformation-item">"times of trouble" → <span class="changed">"lines of rubble"</span></div>
-          <div class="transformation-item">"let it be" → <span class="changed">"get it free"</span></div>
-          <div class="transformation-item">"mother mary" → <span class="changed">"other fairy"</span></div>
-        </div>
-        
-        <div class="content song-content has-text-centered">
-          <p><strong>Original Audio</strong></p>
-          <audio controls>
-            <source src="static/audio/Phoneme/original/Let it Be.mp3" type="audio/mpeg">
-          </audio>
-          <p><strong>Modified Audio (<span class="model-yue">YuE</span>)</strong></p>
-          <audio controls>
-            <source src="static/audio/Phoneme/generated/Let It Be_The Beatles_pop-comforting-male-gentle-vocal-piano-ballad-soothing-warm-melodic-vocal_tp0@93_T1@0_rp1@1_maxtk8000_99245684-2085-4d52-befa-81b5fa9f7569_mixed.mp3" type="audio/mpeg">
-          </audio>
-          <p><strong>Modified Audio (<span class="model-suno">SUNO</span>)</strong></p>
-          <audio controls>
-            <source src="static/audio/Phoneme/generated/Let-it-be-parody-SUNO.mp3" type="audio/mpeg">
-          </audio>
-          <div class="model-tag">Generated using <span class="model-yue">YuE</span> and <span class="model-suno">SUNO</span></div>
-        </div>
-        
-        <div class="lyrics">
-          <h4>Sample Modified Lyrics</h4>
-          <p>When I <span class="changed">bind</span> myself in <span class="changed">lines of rubble</span><br>
-          <span class="changed">Other fairy</span> comes to me<br>
-          <span class="changed">Sneaking terms of vision: get it free</span></p>
-          <p><span class="changed">Get it free, get it free, bet it's me, let it see</span></p>
-        </div>
-      </div>
+        .pop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            margin-top: 2rem;
+        }
 
-      <!-- Lose Yourself Parody -->
-      <div class="box">
-        <h3 class="title is-4">
-          《Lose Yourself》<br>
-          <span class="is-size-6 has-text-weight-normal">Artist: Parody</span>
-        </h3>
-        
-        <div class="key-transformations">
-          <h5>🎯 Key Transformations:</h5>
-          <div class="transformation-item">"knees weak" → <span class="changed">"cheese weak"</span></div>
-          <div class="transformation-item">"mom's spaghetti" → <span class="changed">"Bob's confetti"</span></div>
-          <div class="transformation-item">"calm and ready" → <span class="changed">"clam and ready"</span></div>
-          <div class="transformation-item">"reality" → <span class="changed">"toality"</span></div>
-        </div>
-        
-        <div class="content song-content has-text-centered">
-          <p><strong>Original Audio</strong></p>
-          <audio controls>
-            <source src="static/audio/Phoneme/original/Lose Yourself.mp3" type="audio/mpeg">
-          </audio>
-          <p><strong>Modified Audio (<span class="model-suno">SUNO</span>)</strong></p>
-          <audio controls>
-            <source src="static/audio/Phoneme/generated/lose-yourself-parody-SUNO.mp3" type="audio/mpeg">
-          </audio>
-          <div class="model-tag">Generated using <span class="model-suno">SUNO</span></div>
-        </div>
-        
-        <div class="lyrics">
-          <h4>Sample Modified Lyrics</h4>
-          <p>His pants are sweaty, <span class="changed">cheese weak</span>, cars are heavy<br>
-          There's yogurt on his letter already, <span class="changed">Bob's confetti</span><br>
-          He's cursive, but on the service, he looks <span class="changed">clam and ready</span></p>
-        </div>
-      </div>
+        .pop-box {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-left: 4px solid #8e44ad;
+        }
 
-      <!-- We Will Rock You -->
-      <div class="box">
-        <h3 class="title is-4">
-          《We Will Mock You》<br>
-          <span class="is-size-6 has-text-weight-normal">Artist: Parody</span>
-        </h3>
-        
-        <div class="key-transformations">
-          <h5>🎯 Key Transformations:</h5>
-          <div class="transformation-item">"rock" → <span class="changed">"mock"</span></div>
-          <div class="transformation-item">"boy" → <span class="changed">"grad"</span></div>
-          <div class="transformation-item">"mud on your face" → <span class="changed">"chalk on your face"</span></div>
-          <div class="transformation-item">"kicking your can" → <span class="changed">"waving equations"</span></div>
-        </div>
-        
-        <div class="content song-content has-text-centered">
-          <p><strong>Original Audio</strong></p>
-          <audio controls>
-            <source src="static/audio/Phoneme/original/We will Rock You.mp3" type="audio/mpeg">
-          </audio>
-          <p><strong>Modified Audio (<span class="model-suno">SUNO</span>)</strong></p>
-          <audio controls>
-            <source src="static/audio/Phoneme/generated/We will Rock You (SUNO, no description).mp3" type="audio/mpeg">
-          </audio>
-          <div class="model-tag">Generated using <span class="model-suno">SUNO</span></div>
-        </div>
-        
-        <div class="lyrics">
-          <h4>Sample Modified Lyrics</h4>
-          <p>Buddy you're a <span class="changed">grad</span>, making <span class="changed">bad graphs</span><br>
-          You got <span class="changed">chalk</span> on your face, big disgrace<br>
-          Saying "<span class="changed">We will, we will mock you</span>"</p>
-        </div>
-      </div>
+        .pop-title {
+            color: #2c3e50;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
 
-      <!-- Can't Help Falling in Love -->
-      <div class="box">
-        <h3 class="title is-4">
-          《Can't Help Falling in Glove》<br>
-          <span class="is-size-6 has-text-weight-normal">Artist: Parody</span>
-        </h3>
-        
-        <div class="key-transformations">
-          <h5>🎯 Key Transformations:</h5>
-          <div class="transformation-item">"wise men" → <span class="changed">"wise ben"</span></div>
-          <div class="transformation-item">"fools" → <span class="changed">"jewels"</span></div>
-          <div class="transformation-item">"love" → <span class="changed">"glove"</span></div>
-          <div class="transformation-item">"help" → <span class="changed">"yelp"</span></div>
-          <div class="transformation-item">"you" → <span class="changed">"boo"</span></div>
-        </div>
-        
-        <div class="content song-content has-text-centered">
-          <p><strong>Original Audio</strong></p>
-          <audio controls>
-            <source src="static/audio/Phoneme/original/Can't Help Falling in Love.mp3" type="audio/mpeg">
-          </audio>
-          <p><strong>Modified Audio (<span class="model-suno">SUNO</span>)</strong></p>
-          <audio controls>
-            <source src="static/audio/Phoneme/generated/Can't Help Falling in Love.mp3" type="audio/mpeg">
-          </audio>
-          <div class="model-tag">Generated using <span class="model-suno">SUNO</span></div>
-        </div>
-        
-        <div class="lyrics">
-          <h4>Sample Modified Lyrics</h4>
-          <p><span class="changed">Wise ben</span> say<br>
-          Only <span class="changed">jewels</span>, only <span class="changed">jewels</span> rush in<br>
-          I can't help falling in <span class="changed">glove</span> with <span class="changed">boo</span></p>
-        </div>
-      </div>
+        .artist-name {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-weight: normal;
+            margin-top: 0.25rem;
+        }
 
+        .audio-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .audio-section h5 {
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        .audio-section audio {
+            width: 100%;
+            margin-bottom: 0.5rem;
+        }
+
+        .key-transformations {
+            background: #e8f5e8;
+            border: 1px solid #c3e6c3;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .key-transformations h5 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            color: #2d5016;
+            font-size: 0.95rem;
+            font-weight: bold;
+        }
+
+        .transformation-item {
+            display: inline-block;
+            margin: 0.2rem 0.5rem 0.2rem 0;
+            padding: 0.2rem 0.5rem;
+            background: #f8f9fa;
+            border-radius: 4px;
+            border: 1px solid #e9ecef;
+            font-size: 0.85rem;
+        }
+
+        .lyrics-section {
+            background: #f8f9fa;
+            padding: 1.25rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            max-height: 250px;
+            overflow-y: auto;
+        }
+
+        .lyrics-section h5 {
+            margin-top: 0;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        .lyrics-section p {
+            margin-bottom: 1rem;
+        }
+
+        .model-tag {
+            font-size: 0.75rem;
+            font-style: italic;
+            color: #888;
+            text-align: center;
+            margin-top: 0.25rem;
+        }
+
+        .model-yue {
+            color: #ea9412;
+            font-weight: bold;
+        }
+
+        .model-suno {
+            color: #1e90ff;
+            font-weight: bold;
+        }
+
+        .title {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .audio-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .pop-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .pop-container {
+                padding: 1rem;
+            }
+
+            .audio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pop-container">
+        <h2 class="title">🎭 Pop Phoneme Variants</h2>
+        <p class="subtitle">Subtle lyric swaps preserve phonetic patterns. Changed words are highlighted in red.</p>
+
+        <div class="pop-grid">
+
+            <!-- 月亮代表我的心 -->
+            <div class="pop-box">
+                <div class="pop-title">
+                    🎵 月亮代表我的心
+                    <div class="artist-name">Artist: Teresa Teng</div>
+                </div>
+                
+                <div class="key-transformations">
+                    <h5>🎯 Key Transformations:</h5>
+                    <div class="transformation-item">"我的情也真" → <span class="changed">"我的情不移"</span></div>
+                    <div class="transformation-item">"我的爱也真" → <span class="changed">"我的爱不变"</span></div>
+                </div>
+                
+                <div class="audio-section">
+                    <h5>🎧 Original Audio</h5>
+                    <audio controls>
+                        <source src="static/audio/Phoneme/original/月亮代表我的心.mp3" type="audio/mpeg">
+                    </audio>
+                    
+                    <h5 style="margin-top: 1rem;">🎧 Modified Audio (<span class="model-yue">YuE</span>)</h5>
+                    <audio controls>
+                        <source src="static/audio/Phoneme/generated/月亮代表我的心_Teresa Teng__tp0@93_T1@0_rp1@1_maxtk8000_eced0844-ca95-4b84-be6a-b5985a99279f_mixed.mp3" type="audio/mpeg">
+                    </audio>
+                    <div class="model-tag">Generated using <span class="model-yue">YuE</span></div>
+                </div>
+                
+                <div class="lyrics-section">
+                    <h5>Sample Modified Lyrics</h5>
+                    <p>你问我爱你有多深<br>
+                    我爱你有几分<br><br>
+                    我的情也真<br>
+                    我的爱也真<br>
+                    月亮代表我的心<br><br>
+                    <strong>[Second chorus:]</strong><br>
+                    <span class="changed">我的情不移</span><br>
+                    <span class="changed">我的爱不变</span><br>
+                    月亮代表我的心</p>
+                </div>
+            </div>
+
+            <!-- Let It Be -->
+            <div class="pop-box">
+                <div class="pop-title">
+                    🎵 Let It Be
+                    <div class="artist-name">Artist: The Beatles</div>
+                </div>
+                
+                <div class="key-transformations">
+                    <h5>🎯 Key Transformations:</h5>
+                    <div class="transformation-item">"find" → <span class="changed">"bind"</span></div>
+                    <div class="transformation-item">"times of trouble" → <span class="changed">"lines of rubble"</span></div>
+                    <div class="transformation-item">"let it be" → <span class="changed">"get it free"</span></div>
+                    <div class="transformation-item">"mother mary" → <span class="changed">"other fairy"</span></div>
+                </div>
+                
+                <div class="audio-section">
+                    <h5>🎧 Original Audio</h5>
+                    <audio controls>
+                        <source src="static/audio/Phoneme/original/Let it Be.mp3" type="audio/mpeg">
+                    </audio>
+                    
+                    <h5 style="margin-top: 1rem;">🎧 Modified Audio</h5>
+                    <div class="audio-grid">
+                        <div>
+                            <audio controls>
+                                <source src="static/audio/Phoneme/generated/Let It Be_The Beatles_pop-comforting-male-gentle-vocal-piano-ballad-soothing-warm-melodic-vocal_tp0@93_T1@0_rp1@1_maxtk8000_99245684-2085-4d52-befa-81b5fa9f7569_mixed.mp3" type="audio/mpeg">
+                            </audio>
+                            <div class="model-tag"><span class="model-yue">YuE</span> Version</div>
+                        </div>
+                        <div>
+                            <audio controls>
+                                <source src="static/audio/Phoneme/generated/Let-it-be-parody-SUNO.mp3" type="audio/mpeg">
+                            </audio>
+                            <div class="model-tag"><span class="model-suno">SUNO</span> Version</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lyrics-section">
+                    <h5>Sample Modified Lyrics</h5>
+                    <p>When I <span class="changed">bind</span> myself in <span class="changed">lines of rubble</span><br>
+                    <span class="changed">Other fairy</span> comes to me<br>
+                    <span class="changed">Sneaking terms of vision: get it free</span></p>
+                    <p><span class="changed">Get it free, get it free, bet it's me, let it see</span></p>
+                </div>
+            </div>
+
+            <!-- Lose Yourself -->
+            <div class="pop-box">
+                <div class="pop-title">
+                    🎵 Lose Yourself
+                    <div class="artist-name">Artist: Parody</div>
+                </div>
+                
+                <div class="key-transformations">
+                    <h5>🎯 Key Transformations:</h5>
+                    <div class="transformation-item">"knees weak" → <span class="changed">"cheese weak"</span></div>
+                    <div class="transformation-item">"mom's spaghetti" → <span class="changed">"Bob's confetti"</span></div>
+                    <div class="transformation-item">"calm and ready" → <span class="changed">"clam and ready"</span></div>
+                    <div class="transformation-item">"reality" → <span class="changed">"toality"</span></div>
+                </div>
+                
+                <div class="audio-section">
+                    <h5>🎧 Original Audio</h5>
+                    <audio controls>
+                        <source src="static/audio/Phoneme/original/Lose Yourself.mp3" type="audio/mpeg">
+                    </audio>
+                    
+                    <h5 style="margin-top: 1rem;">🎧 Modified Audio (<span class="model-suno">SUNO</span>)</h5>
+                    <audio controls>
+                        <source src="static/audio/Phoneme/generated/lose-yourself-parody-SUNO.mp3" type="audio/mpeg">
+                    </audio>
+                    <div class="model-tag">Generated using <span class="model-suno">SUNO</span></div>
+                </div>
+                
+                <div class="lyrics-section">
+                    <h5>Sample Modified Lyrics</h5>
+                    <p>His pants are sweaty, <span class="changed">cheese weak</span>, cars are heavy<br>
+                    There's yogurt on his letter already, <span class="changed">Bob's confetti</span><br>
+                    He's cursive, but on the service, he looks <span class="changed">clam and ready</span></p>
+                </div>
+            </div>
+
+            <!-- We Will Rock You -->
+            <div class="pop-box">
+                <div class="pop-title">
+                    🎵 We Will Mock You
+                    <div class="artist-name">Artist: Parody</div>
+                </div>
+                
+                <div class="key-transformations">
+                    <h5>🎯 Key Transformations:</h5>
+                    <div class="transformation-item">"rock" → <span class="changed">"mock"</span></div>
+                    <div class="transformation-item">"boy" → <span class="changed">"grad"</span></div>
+                    <div class="transformation-item">"mud on your face" → <span class="changed">"chalk on your face"</span></div>
+                    <div class="transformation-item">"kicking your can" → <span class="changed">"waving equations"</span></div>
+                </div>
+                
+                <div class="audio-section">
+                    <h5>🎧 Original Audio</h5>
+                    <audio controls>
+                        <source src="static/audio/Phoneme/original/We will Rock You.mp3" type="audio/mpeg">
+                    </audio>
+                    
+                    <h5 style="margin-top: 1rem;">🎧 Modified Audio (<span class="model-suno">SUNO</span>)</h5>
+                    <audio controls>
+                        <source src="static/audio/Phoneme/generated/We will Rock You (SUNO, no description).mp3" type="audio/mpeg">
+                    </audio>
+                    <div class="model-tag">Generated using <span class="model-suno">SUNO</span></div>
+                </div>
+                
+                <div class="lyrics-section">
+                    <h5>Sample Modified Lyrics</h5>
+                    <p>Buddy you're a <span class="changed">grad</span>, making <span class="changed">bad graphs</span><br>
+                    You got <span class="changed">chalk</span> on your face, big disgrace<br>
+                    Saying "<span class="changed">We will, we will mock you</span>"</p>
+                </div>
+            </div>
+
+            <!-- Can't Help Falling in Love -->
+            <div class="pop-box">
+                <div class="pop-title">
+                    🎵 Can't Help Falling in Glove
+                    <div class="artist-name">Artist: Parody</div>
+                </div>
+                
+                <div class="key-transformations">
+                    <h5>🎯 Key Transformations:</h5>
+                    <div class="transformation-item">"wise men" → <span class="changed">"wise ben"</span></div>
+                    <div class="transformation-item">"fools" → <span class="changed">"jewels"</span></div>
+                    <div class="transformation-item">"love" → <span class="changed">"glove"</span></div>
+                    <div class="transformation-item">"help" → <span class="changed">"yelp"</span></div>
+                    <div class="transformation-item">"you" → <span class="changed">"boo"</span></div>
+                </div>
+                
+                <div class="audio-section">
+                    <h5>🎧 Original Audio</h5>
+                    <audio controls>
+                        <source src="static/audio/Phoneme/original/Can't Help Falling in Love.mp3" type="audio/mpeg">
+                    </audio>
+                    
+                    <h5 style="margin-top: 1rem;">🎧 Modified Audio (<span class="model-suno">SUNO</span>)</h5>
+                    <audio controls>
+                        <source src="static/audio/Phoneme/generated/Can't Help Falling in Love.mp3" type="audio/mpeg">
+                    </audio>
+                    <div class="model-tag">Generated using <span class="model-suno">SUNO</span></div>
+                </div>
+                
+                <div class="lyrics-section">
+                    <h5>Sample Modified Lyrics</h5>
+                    <p><span class="changed">Wise ben</span> say<br>
+                    Only <span class="changed">jewels</span>, only <span class="changed">jewels</span> rush in<br>
+                    I can't help falling in <span class="changed">glove</span> with <span class="changed">boo</span></p>
+                </div>
+            </div>
+
+        </div>
     </div>
-  </div>
-</section>
+</body>
+</html>
 
 <!-- Audio Regeneration Comparison for English Songs -->
 <section id="english-songs" class="section hero is-light">
