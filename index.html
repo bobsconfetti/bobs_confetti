@@ -158,19 +158,233 @@
   </ul>
 </nav> -->
 
-<!-- Content -->
-<div class="tabs is-toggle is-toggle-rounded is-fullwidth">
-  <ul>
-    <!-- <li class="is-active"><a href="#abstract">Abstract</a></li> -->
-    <li><a href="#overview">📖 Overview</a></li>
-    <li><a href="#veo3">📽️ Veo 3 Generation</a></li>
-    <li><a href="#christmas-phoneme">🎄 Christmas Phoneme Variants (SUNO)</a></li>
-    <li><a href="#phoneme-variants">🎭 Pop Phoneme Variants</a></li>
-    <li><a href="#english-songs">English (Billboard)</a></li>
-    <li><a href="#mandarin-songs">Mandarin Songs</a></li>
-    <li><a href="#cantonese-songs">Cantonese Songs</a></li>
-    <li><a href="#hou-lai">《后来》 (Hòu Lái)</a></li>
+<style>
+  /* Sidebar Styles */
+  .sidebar {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 280px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1000;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    transition: all 0.3s ease;
+  }
+
+  .sidebar-header {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .sidebar-content {
+    padding: 0;
+  }
+
+  .sidebar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sidebar-nav li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .sidebar-nav li:last-child {
+    border-bottom: none;
+  }
+
+  .sidebar-nav a {
+    display: block;
+    padding: 0.8rem 1rem;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    border-left: 3px solid transparent;
+  }
+
+  .sidebar-nav a:hover {
+    background: rgba(102, 126, 234, 0.1);
+    border-left-color: #667eea;
+    color: #667eea;
+  }
+
+  .sidebar-nav a.active {
+    background: rgba(102, 126, 234, 0.15);
+    border-left-color: #667eea;
+    color: #667eea;
+    font-weight: 600;
+  }
+
+  .sidebar-overview {
+    padding: 1rem;
+    background: rgba(248, 249, 250, 0.8);
+    margin: 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .sidebar-overview h4 {
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .sidebar-overview p {
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #666;
+  }
+
+  .key-findings {
+    background: rgba(76, 175, 80, 0.1);
+    border-left: 3px solid #4caf50;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border-radius: 4px;
+  }
+
+  .key-findings strong {
+    color: #2e7d32;
+  }
+
+  /* Toggle button for mobile */
+  .sidebar-toggle {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+    background: #667eea;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+
+  /* Main content adjustment */
+  .main-content {
+    margin-left: 300px;
+    transition: margin-left 0.3s ease;
+  }
+
+  /* Mobile responsiveness */
+  @media screen and (max-width: 1024px) {
+    .sidebar {
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+
+    .sidebar.open {
+      transform: translateX(0);
+    }
+
+    .sidebar-toggle {
+      display: block;
+    }
+
+    .main-content {
+      margin-left: 0;
+    }
+  }
+
+  /* Existing styles */
+  .changed { 
+    color: #e74c3c; 
+    font-weight: bold; 
+  }
+
+  .video-section-title {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+  }
+
+  .video-pair {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 2rem;
+  }
+
+  .video-block {
+    flex: 1 1 300px;
+    max-width: 400px;
+    text-align: center;
+  }
+
+  .video-block video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .video-title {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    font-size: 0.95rem;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Section spacing */
+  section {
+    scroll-margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+
+<!-- Sidebar Toggle Button (Mobile) -->
+<button class="sidebar-toggle" onclick="toggleSidebar()">
+<i class="fas fa-bars"></i>
+</button>
+
+<!-- Floating Sidebar -->
+<div class="sidebar" id="sidebar">
+<div class="sidebar-header">
+  <h3 class="title is-5 has-text-white" style="margin: 0;">
+    <i class="fas fa-music"></i> Navigation
+  </h3>
+</div>
+
+<div class="sidebar-content">
+  <!-- Navigation Links -->
+  <ul class="sidebar-nav">
+    <li><a href="#title" data-section="title"><i class="fas fa-home"></i> Title</a></li>
+    <li><a href="#overview" data-section="overview"><i class="fas fa-info-circle"></i> Overview</a></li>
+    <li><a href="#veo3" data-section="veo3"><i class="fas fa-video"></i> Veo 3 Generation</a></li>
+    <li><a href="#christmas-phoneme" data-section="christmas-phoneme"><i class="fa-solid fa-microphone"></i></i> Christmas Phoneme</a></li>
+    <li><a href="#rap-phoneme" data-section="rap-phoneme"><i class="fas fa-tree"></i> Rap Phoneme</a></li>
+    <li><a href="#pop-variants" data-section="phoneme-variants"><i class="fas fa-theater-masks"></i> Pop Phoneme</a></li>
+    <li><a href="#english-songs" data-section="english-songs"><i class="fas fa-music"></i> English (Billboard)</a></li>
+    <li><a href="#mandarin-songs" data-section="mandarin-songs"><i class="fas fa-language"></i> Mandarin Songs</a></li>
+    <li><a href="#cantonese-songs" data-section="cantonese-songs"><i class="fas fa-microphone"></i> Cantonese Songs</a></li>
+    <li><a href="#hou-lai" data-section="hou-lai"><i class="fas fa-heart"></i> 《后来》 (Hòu Lái)</a></li>
+    <li><a href="#BibTeX" data-section="BibTeX"><i class="fas fa-quote-left"></i> BibTeX</a></li>
   </ul>
+</div>
 </div>
 
 <!-- Brief Description Section -->
@@ -534,7 +748,7 @@
     </style>
 </head>
 <body>
-    <div class="christmas-container">
+    <div id="christmas-phoneme" class="christmas-container">
         <h2 class="title">🎄 Christmas Phoneme Variants (SUNO)</h2>
         <p class="subtitle">Jingle Bells transformed through phonetic modifications. Changed words are highlighted in red.</p>
 
@@ -815,6 +1029,9 @@
     </div>
 </body>
 </html>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -990,15 +1207,15 @@
     </style>
 </head>
 <body>
-    <div class="pop-container">
+    <div id="rap-phoneme" class="rap-container">
         <h2 class="title">🎤 Rap Phoneme Variants</h2>
         <p class="subtitle">Hip-hop tracks with phonetic modifications. Changed words are highlighted in red.</p>
 
-        <div class="pop-grid">
+        <div class="rap-grid">
 
             <!-- DNA/BMA -->
-            <div class="pop-box">
-                <div class="pop-title">
+            <div class="rap-box">
+                <div class="rap-title">
                     🎵 DNA
                     <div class="artist-name">Artist: Kendrick Lamar</div>
                 </div>
@@ -1138,7 +1355,7 @@
         </div>
     </div>
 
-    <div class="pop-container">
+    <div id="pop-phoneme" class="pop-container">
         <h2 class="title">🎭 Pop Phoneme Variants</h2>
         <p class="subtitle">Pop songs with phonetic modifications. Changed words are highlighted in red.</p>
 
