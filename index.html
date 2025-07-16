@@ -769,7 +769,6 @@
   </div>
 </section>
 
-<!-- Pop Phoneme Variants with Visible Transformations -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -797,7 +796,7 @@
 
         .pop-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
             margin-top: 2rem;
         }
@@ -946,8 +945,150 @@
 </head>
 <body>
     <div class="pop-container">
+        <h2 class="title">🎤 Rap Phoneme Variants</h2>
+        <p class="subtitle">Hip-hop tracks with phonetic modifications. Changed words are highlighted in red.</p>
+
+        <div class="pop-grid">
+
+            <!-- DNA/BMA -->
+            <div class="pop-box">
+                <div class="pop-title">
+                    🎵 DNA/BMA
+                    <div class="artist-name">Artist: Kendrick Lamar (Modified)</div>
+                </div>
+                
+                <div class="key-transformations">
+                    <h5>🎯 Key Transformations:</h5>
+                    <div class="transformation-item">"DNA" → <span class="changed">"BMA"</span></div>
+                    <div class="transformation-item">"loyalty" → <span class="changed">"gravy"</span></div>
+                    <div class="transformation-item">"power" → <span class="changed">"waffle"</span></div>
+                    <div class="transformation-item">"poison" → <span class="changed">"toaster"</span></div>
+                    <div class="transformation-item">"pain" → <span class="changed">"rain"</span></div>
+                </div>
+                
+                <div class="audio-section">
+                    <h5>🎧 Original Audio</h5>
+                    <audio controls>
+                        <source src="static/audio/DNA/original/DNA_original.mp3" type="audio/mpeg">
+                    </audio>
+                    
+                    <h5 style="margin-top: 1rem;">🎧 Modified Audio</h5>
+                    <div class="audio-grid">
+                        <div>
+                            <audio controls>
+                                <source src="static/audio/DNA/generated/phoneme_BMA (rap)_v1.mp3" type="audio/mpeg">
+                            </audio>
+                            <div class="model-tag">Genre: rap</div>
+                        </div>
+                        <div>
+                            <audio controls>
+                                <source src="static/audio/DNA/generated/phoneme_BMA (rap)_v2.mp3" type="audio/mpeg">
+                            </audio>
+                            <div class="model-tag">Genre: rap</div>
+                        </div>
+                    </div>
+                    
+                    <div class="audio-grid" style="margin-top: 10px;">
+                        <div>
+                            <audio controls>
+                                <source src="static/audio/DNA/generated/phoneme_DNA (gangsta, rap, trap).mp3" type="audio/mpeg">
+                            </audio>
+                            <div class="model-tag">Genre: gangsta, rap, trap</div>
+                        </div>
+                        <div>
+                            <audio controls>
+                                <source src="static/audio/DNA/generated/phoneme_DNA (rap).mp3" type="audio/mpeg">
+                            </audio>
+                            <div class="model-tag">Genre: rap</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lyrics-section">
+                    <h5>Full Modified Lyrics</h5>
+                    <p>I got, I got, I got, I got<br>
+                    <span class="changed">Gravy</span>, got <span class="changed">crazy</span> inside my <span class="changed">BMA</span><br>
+                    <span class="changed">Waffle piece</span>, got <span class="changed">store</span>, and <span class="changed">chore</span> inside my <span class="changed">BMA</span><br>
+                    I got <span class="changed">toaster</span>, <span class="changed">moisture</span>, <span class="changed">rain</span>, and <span class="changed">joy</span> inside my <span class="changed">BMA</span><br>
+                    I got hustle, flow, <span class="changed">admission slow</span> inside my <span class="changed">BMA</span></p>
+                     
+                    <p>I was born like this<br>
+                    <span class="changed">Pinch one</span> like this, <span class="changed">inappropriate detection</span><br>
+                    I transform like this, perform like this<br>
+                    Was <span class="changed">Jesus new weapon</span></p>
+                    
+                    <p>I don't hesitate, I meditate<br>
+                    Then off your-, off your head<br>
+                    This that put-the-kids-to-bed<br>
+                    This that I got, I got, I got, I got<br>
+                    Realness, I just <span class="changed">spill tea</span> 'cause it's in my <span class="changed">BMA</span></p>
+                     
+                    <p>I got millions, I got riches <span class="changed">chillin'</span> in my <span class="changed">BMA</span><br>
+                    I got <span class="changed">bark</span>, I got evil that <span class="changed">rot</span> inside my <span class="changed">BMA</span><br>
+                    I got off, I got troublesome heart inside my <span class="changed">BMA</span><br>
+                    I just spin again, then, spin again like <span class="changed">Ping-Pong</span> I serve</p>
+                </div>
+            </div>
+
+            <!-- Lose Yourself -->
+            <div class="pop-box">
+                <div class="pop-title">
+                    🎵 Lose Yourself
+                    <div class="artist-name">Artist: Eminem (Parody)</div>
+                </div>
+                
+                <div class="key-transformations">
+                    <h5>🎯 Key Transformations:</h5>
+                    <div class="transformation-item">"knees weak" → <span class="changed">"cheese weak"</span></div>
+                    <div class="transformation-item">"mom's spaghetti" → <span class="changed">"Bob's confetti"</span></div>
+                    <div class="transformation-item">"calm and ready" → <span class="changed">"clam and ready"</span></div>
+                    <div class="transformation-item">"reality" → <span class="changed">"toality"</span></div>
+                </div>
+                
+                <div class="audio-section">
+                    <h5>🎧 Original Audio</h5>
+                    <audio controls>
+                        <source src="static/audio/Phoneme/original/Lose Yourself.mp3" type="audio/mpeg">
+                    </audio>
+                    
+                    <h5 style="margin-top: 1rem;">🎧 Modified Audio (<span class="model-suno">SUNO</span>) | Genre: N/A</h5>
+                    <audio controls>
+                        <source src="static/audio/Phoneme/generated/lose-yourself-parody-SUNO.mp3" type="audio/mpeg">
+                    </audio>
+                    <div class="model-tag">Generated using <span class="model-suno">SUNO</span></div>
+                </div>
+                
+                <div class="lyrics-section">
+                    <h5>Full Modified Lyrics</h5>
+                    <p>His pants are sweaty, <span class="changed">cheese weak</span>, <span class="changed">cars are heavy</span><br>
+                    There's <span class="changed">yogurt on his letter already</span>, <span class="changed">Bob's confetti</span><br>
+                    He's <span class="changed">cursive</span>, but on the <span class="changed">service</span>, he looks <span class="changed">clam and ready</span><br>
+                    To <span class="changed">shop moms</span>, but he keeps on <span class="changed">betting</span></p>
+
+                    <p>What he <span class="changed">wrote clown</span>, the whole <span class="changed">cloud</span> goes so <span class="changed">proud</span><br>
+                    He opens his <span class="changed">snout</span>, but the <span class="changed">birds</span> won't come out<br>
+                    He's <span class="changed">smokin'</span>, how?<br>
+                    Everybody's <span class="changed">pokin'</span> now</p>
+
+                    <p>The <span class="changed">sock's</span> run out, <span class="changed">lime's up</span>, over, <span class="changed">meow</span><br>
+                    Snap back <span class="changed">toality</span>, rope, there goes <span class="changed">cavity</span><br>
+                    Rope, there goes Rabbit, he <span class="changed">joked</span>, he's so <span class="changed">glad</span><br>
+                    But he won't give up that <span class="changed">sleepy</span>, no, he won't have it</p>
+
+                    <p>He knows his whole <span class="changed">snack's</span> to these hopes, it don't <span class="changed">chatter</span><br>
+                    He's <span class="changed">soap</span>, he knows that, but he's <span class="changed">woke</span>, he's so <span class="changed">tragic</span><br>
+                    He knows when he goes back to this <span class="changed">noble dome</span>, that's when it's<br>
+                    Back to the <span class="changed">crab</span> again, yo, this <span class="changed">bold tragedy</span><br>
+                    Better go <span class="changed">rapture this component</span> and hope it don't <span class="changed">trap him</span></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="pop-container">
         <h2 class="title">🎭 Pop Phoneme Variants</h2>
-        <p class="subtitle">Subtle lyric swaps preserve phonetic patterns. Changed words are highlighted in red.</p>
+        <p class="subtitle">Pop songs with phonetic modifications. Changed words are highlighted in red.</p>
 
         <div class="pop-grid">
 
@@ -1061,64 +1202,11 @@
                 </div>
             </div>
 
-            <!-- Lose Yourself -->
-            <div class="pop-box">
-                <div class="pop-title">
-                    🎵 Lose Yourself
-                    <div class="artist-name">Artist: Parody</div>
-                </div>
-                
-                <div class="key-transformations">
-                    <h5>🎯 Key Transformations:</h5>
-                    <div class="transformation-item">"knees weak" → <span class="changed">"cheese weak"</span></div>
-                    <div class="transformation-item">"mom's spaghetti" → <span class="changed">"Bob's confetti"</span></div>
-                    <div class="transformation-item">"calm and ready" → <span class="changed">"clam and ready"</span></div>
-                    <div class="transformation-item">"reality" → <span class="changed">"toality"</span></div>
-                </div>
-                
-                <div class="audio-section">
-                    <h5>🎧 Original Audio</h5>
-                    <audio controls>
-                        <source src="static/audio/Phoneme/original/Lose Yourself.mp3" type="audio/mpeg">
-                    </audio>
-                    
-                    <h5 style="margin-top: 1rem;">🎧 Modified Audio (<span class="model-suno">SUNO</span>) | Genre: N/A</h5>
-                    <audio controls>
-                        <source src="static/audio/Phoneme/generated/lose-yourself-parody-SUNO.mp3" type="audio/mpeg">
-                    </audio>
-                    <div class="model-tag">Generated using <span class="model-suno">SUNO</span></div>
-                </div>
-                
-                <div class="lyrics-section">
-                    <h5>Full Modified Lyrics</h5>
-                    <p>His pants are sweaty, <span class="changed">cheese weak</span>, <span class="changed">cars are heavy</span><br>
-                    There's <span class="changed">yogurt on his letter already</span>, <span class="changed">Bob's confetti</span><br>
-                    He's <span class="changed">cursive</span>, but on the <span class="changed">service</span>, he looks <span class="changed">clam and ready</span><br>
-                    To <span class="changed">shop moms</span>, but he keeps on <span class="changed">betting</span></p>
-
-                    <p>What he <span class="changed">wrote clown</span>, the whole <span class="changed">cloud</span> goes so <span class="changed">proud</span><br>
-                    He opens his <span class="changed">snout</span>, but the <span class="changed">birds</span> won't come out<br>
-                    He's <span class="changed">smokin'</span>, how?<br>
-                    Everybody's <span class="changed">pokin'</span> now</p>
-
-                    <p>The <span class="changed">sock's</span> run out, <span class="changed">lime's up</span>, over, <span class="changed">meow</span><br>
-                    Snap back <span class="changed">toality</span>, rope, there goes <span class="changed">cavity</span><br>
-                    Rope, there goes Rabbit, he <span class="changed">joked</span>, he's so <span class="changed">glad</span><br>
-                    But he won't give up that <span class="changed">sleepy</span>, no, he won't have it</p>
-
-                    <p>He knows his whole <span class="changed">snack's</span> to these hopes, it don't <span class="changed">chatter</span><br>
-                    He's <span class="changed">soap</span>, he knows that, but he's <span class="changed">woke</span>, he's so <span class="changed">tragic</span><br>
-                    He knows when he goes back to this <span class="changed">noble dome</span>, that's when it's<br>
-                    Back to the <span class="changed">crab</span> again, yo, this <span class="changed">bold tragedy</span><br>
-                    Better go <span class="changed">rapture this component</span> and hope it don't <span class="changed">trap him</span></p>
-                </div>
-            </div>
-
             <!-- We Will Rock You -->
             <div class="pop-box">
                 <div class="pop-title">
                     🎵 We Will Mock You
-                    <div class="artist-name">Artist: Parody</div>
+                    <div class="artist-name">Artist: Queen (Parody)</div>
                 </div>
                 
                 <div class="key-transformations">
