@@ -51,7 +51,7 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">
-            <em>Bob's Confetti</em> : Phonetic Modifications to Uncover Memorization in Lyrics2Song Models
+            <em>Bob's Confetti</em> Phonetic Memorization Attacks in Music and Video Generation
           </h1>
 
           <!-- First line of authors -->
@@ -527,27 +527,8 @@
         </div>
       </div>
 
-      <!-- Jingle Bell Pair -->
-      <div class="video-section-title">🎄 "Jingle Bell" Original vs. Phoneme Parodies</div>
-      <div class="video-pair">
-        <div class="video-block">
-          <video autoplay controls muted loop>
-            <source src="static/videos/Jingle Bell (AVT).mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <div class="video-title">🎭 Original Lyrics</div>
-        </div>
-        <div class="video-block">
-          <video autoplay controls muted loop>
-            <source src="static/videos/Jingle Bell (Flashing).mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <div class="video-title">🎭 Phoneme-Modified Lyrics</div>
-        </div>
-      </div>
-
       <!-- Jingle Bell Modified Lyrics -->
-      <div style="max-width: 800px; margin: 2rem auto; padding: 1.5rem; background: #fafafa; border-radius: 8px; border-left: 4px solid #e74c3c;">
+      <!-- <div style="max-width: 800px; margin: 2rem auto; padding: 1.5rem; background: #fafafa; border-radius: 8px; border-left: 4px solid #e74c3c;">
         <h4 style="margin-top: 0; color: #333; font-size: 1.1rem;">🎄 "Jingle Bell" -> "Jingle Shells" - Phoneme Modified Lyrics</h4>
         <div style="font-size: 0.95rem; line-height: 1.6; color: #444;">
           <p><strong>[Verse]</strong><br>
@@ -592,463 +573,11 @@
 
           <p style="margin-top: 1.5rem; font-style: italic; color: #666;"><strong>Phoneme Modifications:</strong> Key transformations include "bells"→<span class="changed">"shells/smells"</span>, "all"→<span class="changed">"fall/tall"</span>, "fun"→<span class="changed">"sun/run"</span>, "ride"→<span class="changed">"hide/slide"</span>, and "one-horse"→<span class="changed">"fun-horse/sun-horse"</span>, preserving the original rhythmic and melodic patterns.</p>
         </div>
-      </div>
+      </div> -->
 
     </div>
   </div>
 </section>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christmas Phoneme Variants</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f8f9fa;
-        }
-
-        .changed { 
-            color: #e74c3c; 
-            font-weight: bold; 
-        }
-        
-        .christmas-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        .christmas-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-top: 2rem;
-        }
-
-        .christmas-box {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            border-left: 4px solid #c0392b;
-        }
-
-        .christmas-title {
-            color: #2c5530;
-            font-size: 1.1rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .audio-section {
-            margin-bottom: 1.5rem;
-        }
-
-        .audio-section h5 {
-            font-size: 0.9rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-            color: #555;
-        }
-
-        .audio-section audio {
-            width: 100%;
-            margin-bottom: 0.5rem;
-        }
-
-        .key-transformations {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
-            border-radius: 8px;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-        }
-
-        .key-transformations h5 {
-            margin-top: 0;
-            margin-bottom: 0.5rem;
-            color: #856404;
-            font-size: 0.95rem;
-            font-weight: bold;
-        }
-
-        .transformation-item {
-            display: inline-block;
-            margin: 0.2rem 0.5rem 0.2rem 0;
-            padding: 0.2rem 0.5rem;
-            background: #f8f9fa;
-            border-radius: 4px;
-            border: 1px solid #e9ecef;
-            font-size: 0.85rem;
-        }
-
-        .lyrics-section {
-            background: #f8f9fa;
-            padding: 1.25rem;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            line-height: 1.5;
-            max-height: 250px;
-            overflow-y: auto;
-        }
-
-        .lyrics-section h5 {
-            margin-top: 0;
-            color: #333;
-            font-size: 1rem;
-        }
-
-        .lyrics-section p {
-            margin-bottom: 1rem;
-        }
-
-        .model-tag {
-            font-size: 0.75rem;
-            font-style: italic;
-            color: #888;
-            text-align: center;
-            margin-top: 0.25rem;
-        }
-
-        .title {
-            text-align: center;
-            color: #2c3e50;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .subtitle {
-            text-align: center;
-            color: #7f8c8d;
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-        }
-
-        .audio-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        }
-
-        .original-divider {
-            border-top: 2px solid #c0392b;
-            margin: 1rem 0;
-            padding-top: 1rem;
-        }
-
-        @media screen and (max-width: 1024px) {
-            .christmas-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-            .christmas-grid {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-            
-            .christmas-container {
-                padding: 1rem;
-            }
-
-            .audio-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div id="christmas-phoneme" class="christmas-container">
-        <h2 class="title">🎄 Christmas Phoneme Variants</h2>
-        <p class="subtitle">Jingle Bells transformed through phonetic modifications. Changed words are highlighted in red.</p>
-
-        <div class="christmas-grid">
-
-            <!-- Giggle Shell (Christmas Style) -->
-            <div class="christmas-box">
-                <div class="christmas-title">
-                    🎵 Jingle Bell (Giggle Shell)
-                </div>
-                
-                <div class="key-transformations">
-                    <h5>🎯 Key Transformations:</h5>
-                    <div class="transformation-item">"jingle" → <span class="changed">"giggle"</span></div>
-                    <div class="transformation-item">"bells" → <span class="changed">"shells"</span></div>
-                    <div class="transformation-item">"all" → <span class="changed">"fall"</span></div>
-                    <div class="transformation-item">"dashing" → <span class="changed">"flashing"</span></div>
-                    <div class="transformation-item">"snow" → <span class="changed">"glow"</span></div>
-                </div>
-                
-                <div class="audio-section">
-                    <h5>🎧 Original Audio</h5>
-                    <audio controls>
-                        <source src="static/audio/Christmas Phoneme/original/Jingle Bells Original.mp3" type="audio/mpeg">
-                    </audio>
-                    <div class="model-tag">Classic Jingle Bells</div>
-                    
-                    <div class="original-divider"></div>
-                    
-                    <h5>🎧 Genre: "christmas style"</h5>
-                    <div class="audio-grid">
-                        <div>
-                            <audio controls>
-                                <source src="static/audio/Christmas Phoneme/generated/Giggle Shell (christmas style) 1.mp3" type="audio/mpeg">
-                            </audio>
-                            <div class="model-tag">Version 1</div>
-                        </div>
-                        <div>
-                            <audio controls>
-                                <source src="static/audio/Christmas Phoneme/generated/Giggle Shell (christmas style) 2.mp3" type="audio/mpeg">
-                            </audio>
-                            <div class="model-tag">Version 2</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="lyrics-section">
-                    <h5>Full Modified Lyrics</h5>
-                    <p><strong>[Verse]</strong><br>
-                    <span class="changed">Flashing</span> through the <span class="changed">glow</span><br>
-                    In a <span class="changed">fun-horse</span> open <span class="changed">tray</span><br>
-                    <span class="changed">O'er the shields</span> we <span class="changed">flow</span><br>
-                    <span class="changed">Crafting</span> all the day<br>
-                    <span class="changed">Smells</span> on <span class="changed">top tails</span> bring<br>
-                    <span class="changed">Baking</span> spirits bright<br>
-                    What <span class="changed">run</span> it is to <span class="changed">hide and wing</span><br>
-                    A <span class="changed">staying</span> song tonight</p>
-
-                    <p><strong>[Chorus]</strong><br>
-                    <span class="changed">Giggle shells, giggle shells</span><br>
-                    <span class="changed">Giggle fall</span> the way<br>
-                    Oh what <span class="changed">sun</span> it is to <span class="changed">hide</span><br>
-                    In a <span class="changed">fun-horse</span> open <span class="changed">tray</span>, hey!<br>
-                    <span class="changed">Giggle shells, giggle shells</span><br>
-                    <span class="changed">Giggle fall</span> the way<br>
-                    Oh what <span class="changed">sun</span> it is to <span class="changed">hide</span><br>
-                    In a <span class="changed">fun-horse</span> open <span class="changed">tray</span></p>
-
-                    <p><strong>[Verse 2]</strong><br>
-                    A sleigh or two below<br>
-                    I thought I'd make a <span class="changed">tide</span><br>
-                    And soon Miss <span class="changed">Candy Bright</span><br>
-                    Was <span class="changed">heated</span> by my side<br>
-                    The course was <span class="changed">clean and thank</span><br>
-                    Miss <span class="changed">fortune</span> seemed his <span class="changed">spot</span><br>
-                    He got into a <span class="changed">gifted blank</span><br>
-                    And we, we got a lot</p>
-
-                    <p><strong>[Final Chorus]</strong><br>
-                    <span class="changed">Giggle smells, giggle smells</span><br>
-                    <span class="changed">Giggle tall</span> the day<br>
-                    Oh what <span class="changed">run</span> it is to <span class="changed">slide</span><br>
-                    In a <span class="changed">sun-horse</span> open <span class="changed">bay</span>, hey!<br>
-                    <span class="changed">Giggle smells, giggle smells</span><br>
-                    <span class="changed">Giggle tall</span> the day<br>
-                    Oh what <span class="changed">run</span> it is to <span class="changed">slide</span><br>
-                    In a <span class="changed">sun-horse</span> open <span class="changed">bay</span></p>
-                </div>
-            </div>
-
-            <!-- Giggle Shell Sock -->
-            <div class="christmas-box">
-                <div class="christmas-title">
-                    🎵 Jingle Bell Rock (Giggle Shell Sock)
-                </div>
-                
-                <div class="key-transformations">
-                    <h5>🎯 Key Transformations:</h5>
-                    <div class="transformation-item">"jingle bell rock" → <span class="changed">"giggle shell sock"</span></div>
-                    <div class="transformation-item">"time" → <span class="changed">"mime"</span></div>
-                    <div class="transformation-item">"rock" → <span class="changed">"sock"</span></div>
-                    <div class="transformation-item">"jingle hop" → <span class="changed">"giggle hop"</span></div>
-                </div>
-                
-                <div class="audio-section">
-                    <h5>🎧 Original Audio</h5>
-                    <audio controls>
-                        <source src="static/audio/Christmas Phoneme/original/Bobby Helms - Jingle Bell Rock.mp3" type="audio/mpeg">
-                    </audio>
-                    <div class="model-tag">Jingle Bell Rock</div>
-                    
-                    <div class="original-divider"></div>
-                    
-                    <h5>🎧 Genre: "christmas style"</h5>
-                    <div class="audio-grid">
-                        <div>
-                            <audio controls>
-                                <source src="static/audio/Christmas Phoneme/generated/Giggle Shell sock (christmas style) 7.mp3" type="audio/mpeg">
-                            </audio>
-                            <div class="model-tag">Version 1</div>
-                        </div>
-                        <div>
-                            <audio controls>
-                                <source src="static/audio/Christmas Phoneme/generated/Giggle Shell sock (christmas style) 8.mp3" type="audio/mpeg">
-                            </audio>
-                            <div class="model-tag">Version 2</div>
-                        </div>
-                    </div>
-                    
-                    <h5 style="margin-top: 1rem;">🎧 Genre: N/A</h5>
-                    <div class="audio-grid">
-                        <div>
-                            <audio controls>
-                                <source src="static/audio/Christmas Phoneme/generated/Giggle Shell sock (no description) 3.mp3" type="audio/mpeg">
-                            </audio>
-                            <div class="model-tag">Version 1</div>
-                        </div>
-                        <div>
-                            <audio controls>
-                                <source src="static/audio/Christmas Phoneme/generated/Giggle Shell sock (no description) 4.mp3" type="audio/mpeg">
-                            </audio>
-                            <div class="model-tag">Version 2</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="lyrics-section">
-                    <h5>Full Modified Lyrics</h5>
-                    <p><span class="changed">Giggle shell, Giggle shell, Giggle shell sock</span><br>
-                    <span class="changed">Giggle shells</span> swing and <span class="changed">Giggle shells</span> ring<br>
-                    Snowin' and blowin' up bushels of fun<br>
-                    Now the <span class="changed">Giggle hop</span> has begun</p>
-
-                    <p><span class="changed">Giggle shell, Giggle shell, Giggle shell sock</span><br>
-                    <span class="changed">Giggle shells</span> chime in<br>
-                    <span class="changed">Giggle shell time/mime</span><br>
-                    Dancin' and prancin' in <span class="changed">Giggle Shell Square</span><br>
-                    In the frosty air</p>
-
-                    <p>What a bright <span class="changed">time/mime</span>, it's the right <span class="changed">time/mime</span><br>
-                    To <span class="changed">sock</span> the night away<br>
-                    <span class="changed">Giggle shell time/mime</span> is a swell <span class="changed">time/mime</span><br>
-                    To go glidin' in a one-horse sleigh</p>
-
-                    <p>Giddy-up <span class="changed">Giggle horse</span>, pick up your feet<br>
-                    <span class="changed">Giggle</span> around the clock<br>
-                    Mix and a-mingle in the <span class="changed">jinglin'</span> feet<br>
-                    That's the <span class="changed">Giggle shell sock</span></p>
-
-                    <p>That's the <span class="changed">Giggle shell</span><br>
-                    That's the <span class="changed">Giggle shell</span><br>
-                    That's the <span class="changed">Giggle shell sock</span></p>
-                </div>
-            </div>
-
-            <!-- Jingle Shells (SUNO) -->
-            <div class="christmas-box">
-                <div class="christmas-title">
-                    🎵 Jingle Bell (Jingle Shells)
-                </div>
-                
-                <div class="key-transformations">
-                    <h5>🎯 Key Transformations:</h5>
-                    <div class="transformation-item">"bells" → <span class="changed">"shells/smells"</span></div>
-                    <div class="transformation-item">"all" → <span class="changed">"fall/tall"</span></div>
-                    <div class="transformation-item">"fun" → <span class="changed">"sun/run"</span></div>
-                    <div class="transformation-item">"ride" → <span class="changed">"hide/slide"</span></div>
-                    <div class="transformation-item">"one-horse" → <span class="changed">"fun-horse/sun-horse"</span></div>
-                </div>
-                
-                <div class="audio-section">
-                    <h5>🎧 Original Audio</h5>
-                    <audio controls>
-                        <source src="static/audio/Christmas Phoneme/original/Jingle Bells Original.mp3" type="audio/mpeg">
-                    </audio>
-                    <div class="model-tag">Classic Jingle Bells</div>
-                    
-                    <div class="original-divider"></div>
-                    
-                    <h5>🎧 Genre: "christmas style"</h5>
-                    <div class="audio-grid">
-                        <div>
-                            <audio controls>
-                                <source src="static/audio/Christmas Phoneme/generated/Jingle Shells (SUNO, christmas style)_1.mp3" type="audio/mpeg">
-                            </audio>
-                            <div class="model-tag">Version 1</div>
-                        </div>
-                        <div>
-                            <audio controls>
-                                <source src="static/audio/Christmas Phoneme/generated/Jingle Shells (SUNO, christmas style)_2.mp3" type="audio/mpeg">
-                            </audio>
-                            <div class="model-tag">Version 2</div>
-                        </div>
-                    </div>
-                    
-                    <h5 style="margin-top: 1rem;">🎧 Genre: N/A</h5>
-                    <div class="audio-grid">
-                        <div>
-                            <audio controls>
-                                <source src="static/audio/Christmas Phoneme/generated/Jingle Shells (SUNO, no genre)_1.mp3" type="audio/mpeg">
-                            </audio>
-                            <div class="model-tag">Version 1</div>
-                        </div>
-                        <div>
-                            <audio controls>
-                                <source src="static/audio/Christmas Phoneme/generated/Jingle Shells (SUNO, no genre)_2.mp3" type="audio/mpeg">
-                            </audio>
-                            <div class="model-tag">Version 2</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="lyrics-section">
-                    <h5>Full Modified Lyrics</h5>
-                    <p><strong>[Verse]</strong><br>
-                    <span class="changed">Flashing</span> through the <span class="changed">glow</span><br>
-                    In a <span class="changed">fun-horse</span> open <span class="changed">tray</span><br>
-                    <span class="changed">O'er the shields</span> we <span class="changed">flow</span><br>
-                    <span class="changed">Crafting</span> all the day<br>
-                    <span class="changed">Smells</span> on <span class="changed">top tails</span> bring<br>
-                    <span class="changed">Baking</span> spirits bright<br>
-                    What <span class="changed">run</span> it is to <span class="changed">hide and wing</span><br>
-                    A <span class="changed">staying</span> song tonight</p>
-
-                    <p><strong>[Chorus]</strong><br>
-                    <span class="changed">Jingle shells, jingle shells</span><br>
-                    <span class="changed">Jingle fall</span> the way<br>
-                    Oh what <span class="changed">sun</span> it is to <span class="changed">hide</span><br>
-                    In a <span class="changed">fun-horse</span> open <span class="changed">tray</span>, hey!<br>
-                    <span class="changed">Jingle shells, jingle shells</span><br>
-                    <span class="changed">Jingle fall</span> the way<br>
-                    Oh what <span class="changed">sun</span> it is to <span class="changed">hide</span><br>
-                    In a <span class="changed">fun-horse</span> open <span class="changed">tray</span></p>
-
-                    <p><strong>[Verse 2]</strong><br>
-                    A sleigh or two below<br>
-                    I thought I'd make a <span class="changed">tide</span><br>
-                    And soon Miss <span class="changed">Candy Bright</span><br>
-                    Was <span class="changed">heated</span> by my side<br>
-                    The course was <span class="changed">clean and thank</span><br>
-                    Miss <span class="changed">fortune</span> seemed his <span class="changed">spot</span><br>
-                    He got into a <span class="changed">gifted blank</span><br>
-                    And we, we got a lot</p>
-
-                    <p><strong>[Final Chorus]</strong><br>
-                    <span class="changed">Jingle smells, jingle smells</span><br>
-                    <span class="changed">Jingle tall</span> the day<br>
-                    Oh what <span class="changed">run</span> it is to <span class="changed">slide</span><br>
-                    In a <span class="changed">sun-horse</span> open <span class="changed">bay</span>, hey!<br>
-                    <span class="changed">Jingle smells, jingle smells</span><br>
-                    <span class="changed">Jingle tall</span> the day<br>
-                    Oh what <span class="changed">run</span> it is to <span class="changed">slide</span><br>
-                    In a <span class="changed">sun-horse</span> open <span class="changed">bay</span></p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</body>
-</html>
 
 
 <!DOCTYPE html>
@@ -2087,6 +1616,475 @@
     </div>
   </div>
 </section>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Phoneme Variants</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa;
+        }
+
+        .changed { 
+            color: #e74c3c; 
+            font-weight: bold; 
+        }
+        
+        .christmas-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .christmas-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 2rem;
+        }
+
+        .christmas-box {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-left: 4px solid #c0392b;
+        }
+
+        .christmas-title {
+            color: #2c5530;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .audio-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .audio-section h5 {
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        .audio-section audio {
+            width: 100%;
+            margin-bottom: 0.5rem;
+        }
+
+        .key-transformations {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .key-transformations h5 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            color: #856404;
+            font-size: 0.95rem;
+            font-weight: bold;
+        }
+
+        .transformation-item {
+            display: inline-block;
+            margin: 0.2rem 0.5rem 0.2rem 0;
+            padding: 0.2rem 0.5rem;
+            background: #f8f9fa;
+            border-radius: 4px;
+            border: 1px solid #e9ecef;
+            font-size: 0.85rem;
+        }
+
+        .lyrics-section {
+            background: #f8f9fa;
+            padding: 1.25rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            max-height: 250px;
+            overflow-y: auto;
+        }
+
+        .lyrics-section h5 {
+            margin-top: 0;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        .lyrics-section p {
+            margin-bottom: 1rem;
+        }
+
+        .model-tag {
+            font-size: 0.75rem;
+            font-style: italic;
+            color: #888;
+            text-align: center;
+            margin-top: 0.25rem;
+        }
+
+        .title {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .audio-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .original-divider {
+            border-top: 2px solid #c0392b;
+            margin: 1rem 0;
+            padding-top: 1rem;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .christmas-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .christmas-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .christmas-container {
+                padding: 1rem;
+            }
+
+            .audio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="christmas-phoneme" class="christmas-container">
+        <h2 class="title">🎄 Christmas Phoneme Variants</h2>
+        <p class="subtitle">Jingle Bells transformed through phonetic modifications. Changed words are highlighted in red.</p>
+
+        <div class="christmas-grid">
+
+        <!-- Jingle Bell Pair -->
+      <div class="video-section-title">🎄 "Jingle Bell" Original vs. Phoneme Parodies</div>
+      <div class="video-pair">
+        <div class="video-block">
+          <video autoplay controls muted loop>
+            <source src="static/videos/Jingle Bell (AVT).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-title">🎭 Original Lyrics</div>
+        </div>
+        <div class="video-block">
+          <video autoplay controls muted loop>
+            <source src="static/videos/Jingle Bell (Flashing).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-title">🎭 Phoneme-Modified Lyrics</div>
+        </div>
+      </div>
+
+            <!-- Giggle Shell (Christmas Style) -->
+            <div class="christmas-box">
+                <div class="christmas-title">
+                    🎵 Jingle Bell (Giggle Shell)
+                </div>
+                
+                <div class="key-transformations">
+                    <h5>🎯 Key Transformations:</h5>
+                    <div class="transformation-item">"jingle" → <span class="changed">"giggle"</span></div>
+                    <div class="transformation-item">"bells" → <span class="changed">"shells"</span></div>
+                    <div class="transformation-item">"all" → <span class="changed">"fall"</span></div>
+                    <div class="transformation-item">"dashing" → <span class="changed">"flashing"</span></div>
+                    <div class="transformation-item">"snow" → <span class="changed">"glow"</span></div>
+                </div>
+                
+                <div class="audio-section">
+                    <h5>🎧 Original Audio</h5>
+                    <audio controls>
+                        <source src="static/audio/Christmas Phoneme/original/Jingle Bells Original.mp3" type="audio/mpeg">
+                    </audio>
+                    <div class="model-tag">Classic Jingle Bells</div>
+                    
+                    <div class="original-divider"></div>
+                    
+                    <h5>🎧 Genre: "christmas style"</h5>
+                    <div class="audio-grid">
+                        <div>
+                            <audio controls>
+                                <source src="static/audio/Christmas Phoneme/generated/Giggle Shell (christmas style) 1.mp3" type="audio/mpeg">
+                            </audio>
+                            <div class="model-tag">Version 1</div>
+                        </div>
+                        <div>
+                            <audio controls>
+                                <source src="static/audio/Christmas Phoneme/generated/Giggle Shell (christmas style) 2.mp3" type="audio/mpeg">
+                            </audio>
+                            <div class="model-tag">Version 2</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lyrics-section">
+                    <h5>Full Modified Lyrics</h5>
+                    <p><strong>[Verse]</strong><br>
+                    <span class="changed">Flashing</span> through the <span class="changed">glow</span><br>
+                    In a <span class="changed">fun-horse</span> open <span class="changed">tray</span><br>
+                    <span class="changed">O'er the shields</span> we <span class="changed">flow</span><br>
+                    <span class="changed">Crafting</span> all the day<br>
+                    <span class="changed">Smells</span> on <span class="changed">top tails</span> bring<br>
+                    <span class="changed">Baking</span> spirits bright<br>
+                    What <span class="changed">run</span> it is to <span class="changed">hide and wing</span><br>
+                    A <span class="changed">staying</span> song tonight</p>
+
+                    <p><strong>[Chorus]</strong><br>
+                    <span class="changed">Giggle shells, giggle shells</span><br>
+                    <span class="changed">Giggle fall</span> the way<br>
+                    Oh what <span class="changed">sun</span> it is to <span class="changed">hide</span><br>
+                    In a <span class="changed">fun-horse</span> open <span class="changed">tray</span>, hey!<br>
+                    <span class="changed">Giggle shells, giggle shells</span><br>
+                    <span class="changed">Giggle fall</span> the way<br>
+                    Oh what <span class="changed">sun</span> it is to <span class="changed">hide</span><br>
+                    In a <span class="changed">fun-horse</span> open <span class="changed">tray</span></p>
+
+                    <p><strong>[Verse 2]</strong><br>
+                    A sleigh or two below<br>
+                    I thought I'd make a <span class="changed">tide</span><br>
+                    And soon Miss <span class="changed">Candy Bright</span><br>
+                    Was <span class="changed">heated</span> by my side<br>
+                    The course was <span class="changed">clean and thank</span><br>
+                    Miss <span class="changed">fortune</span> seemed his <span class="changed">spot</span><br>
+                    He got into a <span class="changed">gifted blank</span><br>
+                    And we, we got a lot</p>
+
+                    <p><strong>[Final Chorus]</strong><br>
+                    <span class="changed">Giggle smells, giggle smells</span><br>
+                    <span class="changed">Giggle tall</span> the day<br>
+                    Oh what <span class="changed">run</span> it is to <span class="changed">slide</span><br>
+                    In a <span class="changed">sun-horse</span> open <span class="changed">bay</span>, hey!<br>
+                    <span class="changed">Giggle smells, giggle smells</span><br>
+                    <span class="changed">Giggle tall</span> the day<br>
+                    Oh what <span class="changed">run</span> it is to <span class="changed">slide</span><br>
+                    In a <span class="changed">sun-horse</span> open <span class="changed">bay</span></p>
+                </div>
+            </div>
+
+            <!-- Giggle Shell Sock -->
+            <div class="christmas-box">
+                <div class="christmas-title">
+                    🎵 Jingle Bell Rock (Giggle Shell Sock)
+                </div>
+                
+                <div class="key-transformations">
+                    <h5>🎯 Key Transformations:</h5>
+                    <div class="transformation-item">"jingle bell rock" → <span class="changed">"giggle shell sock"</span></div>
+                    <div class="transformation-item">"time" → <span class="changed">"mime"</span></div>
+                    <div class="transformation-item">"rock" → <span class="changed">"sock"</span></div>
+                    <div class="transformation-item">"jingle hop" → <span class="changed">"giggle hop"</span></div>
+                </div>
+                
+                <div class="audio-section">
+                    <h5>🎧 Original Audio</h5>
+                    <audio controls>
+                        <source src="static/audio/Christmas Phoneme/original/Bobby Helms - Jingle Bell Rock.mp3" type="audio/mpeg">
+                    </audio>
+                    <div class="model-tag">Jingle Bell Rock</div>
+                    
+                    <div class="original-divider"></div>
+                    
+                    <h5>🎧 Genre: "christmas style"</h5>
+                    <div class="audio-grid">
+                        <div>
+                            <audio controls>
+                                <source src="static/audio/Christmas Phoneme/generated/Giggle Shell sock (christmas style) 7.mp3" type="audio/mpeg">
+                            </audio>
+                            <div class="model-tag">Version 1</div>
+                        </div>
+                        <div>
+                            <audio controls>
+                                <source src="static/audio/Christmas Phoneme/generated/Giggle Shell sock (christmas style) 8.mp3" type="audio/mpeg">
+                            </audio>
+                            <div class="model-tag">Version 2</div>
+                        </div>
+                    </div>
+                    
+                    <h5 style="margin-top: 1rem;">🎧 Genre: N/A</h5>
+                    <div class="audio-grid">
+                        <div>
+                            <audio controls>
+                                <source src="static/audio/Christmas Phoneme/generated/Giggle Shell sock (no description) 3.mp3" type="audio/mpeg">
+                            </audio>
+                            <div class="model-tag">Version 1</div>
+                        </div>
+                        <div>
+                            <audio controls>
+                                <source src="static/audio/Christmas Phoneme/generated/Giggle Shell sock (no description) 4.mp3" type="audio/mpeg">
+                            </audio>
+                            <div class="model-tag">Version 2</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lyrics-section">
+                    <h5>Full Modified Lyrics</h5>
+                    <p><span class="changed">Giggle shell, Giggle shell, Giggle shell sock</span><br>
+                    <span class="changed">Giggle shells</span> swing and <span class="changed">Giggle shells</span> ring<br>
+                    Snowin' and blowin' up bushels of fun<br>
+                    Now the <span class="changed">Giggle hop</span> has begun</p>
+
+                    <p><span class="changed">Giggle shell, Giggle shell, Giggle shell sock</span><br>
+                    <span class="changed">Giggle shells</span> chime in<br>
+                    <span class="changed">Giggle shell time/mime</span><br>
+                    Dancin' and prancin' in <span class="changed">Giggle Shell Square</span><br>
+                    In the frosty air</p>
+
+                    <p>What a bright <span class="changed">time/mime</span>, it's the right <span class="changed">time/mime</span><br>
+                    To <span class="changed">sock</span> the night away<br>
+                    <span class="changed">Giggle shell time/mime</span> is a swell <span class="changed">time/mime</span><br>
+                    To go glidin' in a one-horse sleigh</p>
+
+                    <p>Giddy-up <span class="changed">Giggle horse</span>, pick up your feet<br>
+                    <span class="changed">Giggle</span> around the clock<br>
+                    Mix and a-mingle in the <span class="changed">jinglin'</span> feet<br>
+                    That's the <span class="changed">Giggle shell sock</span></p>
+
+                    <p>That's the <span class="changed">Giggle shell</span><br>
+                    That's the <span class="changed">Giggle shell</span><br>
+                    That's the <span class="changed">Giggle shell sock</span></p>
+                </div>
+            </div>
+
+            <!-- Jingle Shells (SUNO) -->
+            <div class="christmas-box">
+                <div class="christmas-title">
+                    🎵 Jingle Bell (Jingle Shells)
+                </div>
+                
+                <div class="key-transformations">
+                    <h5>🎯 Key Transformations:</h5>
+                    <div class="transformation-item">"bells" → <span class="changed">"shells/smells"</span></div>
+                    <div class="transformation-item">"all" → <span class="changed">"fall/tall"</span></div>
+                    <div class="transformation-item">"fun" → <span class="changed">"sun/run"</span></div>
+                    <div class="transformation-item">"ride" → <span class="changed">"hide/slide"</span></div>
+                    <div class="transformation-item">"one-horse" → <span class="changed">"fun-horse/sun-horse"</span></div>
+                </div>
+                
+                <div class="audio-section">
+                    <h5>🎧 Original Audio</h5>
+                    <audio controls>
+                        <source src="static/audio/Christmas Phoneme/original/Jingle Bells Original.mp3" type="audio/mpeg">
+                    </audio>
+                    <div class="model-tag">Classic Jingle Bells</div>
+                    
+                    <div class="original-divider"></div>
+                    
+                    <h5>🎧 Genre: "christmas style"</h5>
+                    <div class="audio-grid">
+                        <div>
+                            <audio controls>
+                                <source src="static/audio/Christmas Phoneme/generated/Jingle Shells (SUNO, christmas style)_1.mp3" type="audio/mpeg">
+                            </audio>
+                            <div class="model-tag">Version 1</div>
+                        </div>
+                        <div>
+                            <audio controls>
+                                <source src="static/audio/Christmas Phoneme/generated/Jingle Shells (SUNO, christmas style)_2.mp3" type="audio/mpeg">
+                            </audio>
+                            <div class="model-tag">Version 2</div>
+                        </div>
+                    </div>
+                    
+                    <h5 style="margin-top: 1rem;">🎧 Genre: N/A</h5>
+                    <div class="audio-grid">
+                        <div>
+                            <audio controls>
+                                <source src="static/audio/Christmas Phoneme/generated/Jingle Shells (SUNO, no genre)_1.mp3" type="audio/mpeg">
+                            </audio>
+                            <div class="model-tag">Version 1</div>
+                        </div>
+                        <div>
+                            <audio controls>
+                                <source src="static/audio/Christmas Phoneme/generated/Jingle Shells (SUNO, no genre)_2.mp3" type="audio/mpeg">
+                            </audio>
+                            <div class="model-tag">Version 2</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lyrics-section">
+                    <h5>Full Modified Lyrics</h5>
+                    <p><strong>[Verse]</strong><br>
+                    <span class="changed">Flashing</span> through the <span class="changed">glow</span><br>
+                    In a <span class="changed">fun-horse</span> open <span class="changed">tray</span><br>
+                    <span class="changed">O'er the shields</span> we <span class="changed">flow</span><br>
+                    <span class="changed">Crafting</span> all the day<br>
+                    <span class="changed">Smells</span> on <span class="changed">top tails</span> bring<br>
+                    <span class="changed">Baking</span> spirits bright<br>
+                    What <span class="changed">run</span> it is to <span class="changed">hide and wing</span><br>
+                    A <span class="changed">staying</span> song tonight</p>
+
+                    <p><strong>[Chorus]</strong><br>
+                    <span class="changed">Jingle shells, jingle shells</span><br>
+                    <span class="changed">Jingle fall</span> the way<br>
+                    Oh what <span class="changed">sun</span> it is to <span class="changed">hide</span><br>
+                    In a <span class="changed">fun-horse</span> open <span class="changed">tray</span>, hey!<br>
+                    <span class="changed">Jingle shells, jingle shells</span><br>
+                    <span class="changed">Jingle fall</span> the way<br>
+                    Oh what <span class="changed">sun</span> it is to <span class="changed">hide</span><br>
+                    In a <span class="changed">fun-horse</span> open <span class="changed">tray</span></p>
+
+                    <p><strong>[Verse 2]</strong><br>
+                    A sleigh or two below<br>
+                    I thought I'd make a <span class="changed">tide</span><br>
+                    And soon Miss <span class="changed">Candy Bright</span><br>
+                    Was <span class="changed">heated</span> by my side<br>
+                    The course was <span class="changed">clean and thank</span><br>
+                    Miss <span class="changed">fortune</span> seemed his <span class="changed">spot</span><br>
+                    He got into a <span class="changed">gifted blank</span><br>
+                    And we, we got a lot</p>
+
+                    <p><strong>[Final Chorus]</strong><br>
+                    <span class="changed">Jingle smells, jingle smells</span><br>
+                    <span class="changed">Jingle tall</span> the day<br>
+                    Oh what <span class="changed">run</span> it is to <span class="changed">slide</span><br>
+                    In a <span class="changed">sun-horse</span> open <span class="changed">bay</span>, hey!<br>
+                    <span class="changed">Jingle smells, jingle smells</span><br>
+                    <span class="changed">Jingle tall</span> the day<br>
+                    Oh what <span class="changed">run</span> it is to <span class="changed">slide</span><br>
+                    In a <span class="changed">sun-horse</span> open <span class="changed">bay</span></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
 
 
 <!-- Image carousel -->
