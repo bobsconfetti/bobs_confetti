@@ -490,10 +490,12 @@
 
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <h3 class="title is-3 has-text-centered">📽️ Video Generation Attack (Veo 3)</h3>
+      <h2 class="title is-3 has-text-centered">📽️ Video Generation Attack (Veo 3)</h2>
+      <!-- <h2 class="title">🎤 Rap Phoneme Variants</h2> -->
+      <!-- <p class="subtitle">Hip-hop tracks with phonetic modifications. Changed words are highlighted in red.</p> -->
 
       <!-- Lose Yourself - Original Left, Generated Stacked Right -->
-      <div class="video-section-title">🎤 "Lose Yourself" - Complete Comparison</div>
+      <div class="video-section-title">🎤 "Lose Yourself" - Veo 3 Generations</div>
       <div style="display: flex; gap: 30px; align-items: center; justify-content: center; max-width: 1200px; margin: 0 auto; flex-wrap: wrap;">
         <!-- Original Video - Left Column -->
         <div class="video-block" style="flex: 1; max-width: 500px; min-width: 350px;">
@@ -927,7 +929,7 @@
 </head>
 <body>
     <div id="rap-phoneme" class="pop-container">
-        <h2 class="title">🎤 Rap Phoneme Variants</h2>
+        <h3 class="title">🎤 Rap Phoneme Variants (SUNO)</h3>
         <p class="subtitle">Hip-hop tracks with phonetic modifications. Changed words are highlighted in red.</p>
 
         <div class="pop-grid">
@@ -1787,6 +1789,50 @@
     </div>
   </div>
 </section>
+
+
+<style>
+  .video-section-title {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+  }
+
+  .video-pair {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 2rem;
+  }
+
+  .video-block {
+    flex: 1 1 300px;
+    max-width: 400px;
+    text-align: center;
+  }
+
+  .video-block video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .video-title {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    font-size: 0.95rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    .video-pair {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
 
 <body>
     <div id="christmas-phoneme" class="christmas-container">
