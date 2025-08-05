@@ -412,13 +412,13 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Demo Overview</h2>
+        <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            This interactive demonstration showcases our research on memorization in lyrics-to-music generative models. We present evidence that state-of-the-art models like YuE can reproduce copyrighted songs with high fidelity when given original or phonetically-modified lyrics.
+            Lyrics-to-Song (L2S) generation models promise end-to-end music synthesis from text, but their vulnerability to copyright leakage remains underexplored. To mitigate this risk, commercial systems typically block prompts containing copyrighted lyrics. In this work, we introduce Adversarial PhoneTic Prompting (APT), an attack that replaces iconic phrases with homophonic alternatives—e.g., “mom’s spaghetti” becomes “Bob’s confetti”—preserving the acoustic form while bypassing copyright filters. We reveal that models can be prompted to regurgitate memorized songs using phonetically similar but semantically unrelated lyrics. Despite the semantic drift, black-box models like SUNO and open-source models like YuE generate outputs that are strikingly similar to the original songs—melodically, rhythmically, and vocally—achieving high scores on CLAP, AudioJudge, and CoverID. These effects persist across genres and languages. More surprisingly, we find that phonetic prompts alone can trigger visual memorization in text-to-video models: when given altered lyrics from Lose Yourself, Veo~3 generates scenes that mirror the original music video—complete with a hooded rapper and dim urban settings—despite no explicit visual cues in the prompt. Our findings reveal a novel vulnerability in generative models: they can leak memorized, copyrighted content not only through exact matches, but through indirect, phonetic prompting. This highlights a gap in existing safety filters and raises urgent concerns around copyright, provenance, and secure deployment of multimodal generation systems.
           </p>
           <p>
-            <strong>Key Findings:</strong> Through systematic testing with phoneme modifications (like "jingle bells" → "jingle shells"), we demonstrate that AI music models exhibit significant memorization, raising important questions about copyright safety in generative music systems.
+            <strong>Key Findings:</strong> Through systematic testing with phoneme modifications (like "mom's spaghetti" → "Bob's confetti"), we demonstrate that AI music models exhibit significant memorization, raising important questions about copyright safety in generative music systems.
           </p>
         </div>
       </div>
