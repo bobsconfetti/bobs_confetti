@@ -813,7 +813,7 @@
 
         .pop-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             margin-top: 2rem;
         }
@@ -956,6 +956,19 @@
 
             .audio-grid {
                 grid-template-columns: 1fr;
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+            .pop-grid {
+                grid-template-columns: repeat(2, 1fr);  /* 2 columns on tablets */
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .pop-grid {
+                grid-template-columns: 1fr;  /* 1 column on mobile */
+                gap: 15px;
             }
         }
     </style>
